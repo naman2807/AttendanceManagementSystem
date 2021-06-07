@@ -19,5 +19,6 @@ public class SQLQueries {
     }
 
     public static String insertNewAttendanceCandidateQuery(){
+        return "INSERT INTO " + ATTENDANCE_TABLE + "(" + ID + ") VALUES (?)";
     }
 }
