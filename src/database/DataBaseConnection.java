@@ -11,4 +11,5 @@ package database;
 public final class DataBaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "";
+    private static final String URL = "";
 }

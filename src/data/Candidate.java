@@ -15,14 +15,14 @@ import java.util.Objects;
 
 public class Candidate {
     private final SimpleStringProperty name = new SimpleStringProperty("");
-    private final SimpleLongProperty phoneNumber = new SimpleLongProperty();
+    private final SimpleStringProperty phoneNumber = new SimpleStringProperty("");
     private final SimpleStringProperty id = new SimpleStringProperty("");
     private final SimpleStringProperty address = new SimpleStringProperty("");
 
     public Candidate() {
     }
 
-    public Candidate(String name, long phoneNumber, String id, String address){
+    public Candidate(String name, String phoneNumber, String id, String address){
         this.name.set(name);
         this.phoneNumber.set(phoneNumber);
         this.id.set(id);
@@ -41,15 +41,15 @@ public class Candidate {
         this.name.set(name);
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber.get();
     }
 
-    public SimpleLongProperty phoneNumberProperty() {
+    public SimpleStringProperty phoneNumberProperty() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber.set(phoneNumber);
     }
 
