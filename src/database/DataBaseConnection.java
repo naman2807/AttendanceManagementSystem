@@ -9,4 +9,5 @@ package database;
  */
 
 public final class DataBaseConnection {
+    private final String USER = "root";
 }
