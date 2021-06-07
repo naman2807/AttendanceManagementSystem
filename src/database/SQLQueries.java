@@ -9,4 +9,5 @@ package database;
  */
 
 public class SQLQueries {
+    private static final String CANDIDATE_TABLE = "candidate_tbl";
 }
