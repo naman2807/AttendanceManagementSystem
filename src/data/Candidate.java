@@ -3,6 +3,8 @@ package data;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+import java.util.Objects;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -73,5 +75,18 @@ public class Candidate {
 
     public void setAddress(String address) {
         this.address.set(address);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Candidate candidate = (Candidate) o;
+        return Objects.equals(name, candidate.name) && Objects.equals(phoneNumber, candidate.phoneNumber) && Objects.equals(id, candidate.id) && Objects.equals(address, candidate.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, phoneNumber, id, address);
     }
 }
