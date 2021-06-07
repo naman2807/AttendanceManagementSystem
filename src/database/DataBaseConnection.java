@@ -12,10 +12,16 @@ public final class DataBaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://localhost:3306/attendance_management";
+    private static final DataBaseConnection connection;
 
-    private DataBaseConnection(){}
+    private DataBaseConnection(){
+    }
 
-    public static DataBaseConnection getInstance(){
+    public static void connectToDataBase(){
 
+    }
+
+    public static DataBaseConnection getConnection(){
+        return connection;
     }
 }
