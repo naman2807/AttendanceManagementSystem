@@ -12,4 +12,5 @@ public class SQLQueries {
     private static final String CANDIDATE_TABLE = "candidate_tbl";
     private static final String ID = "id";
     private static final String ATTENDANCE_TABLE = "attendance";
+    private static final String STATUS = "status";
 }
