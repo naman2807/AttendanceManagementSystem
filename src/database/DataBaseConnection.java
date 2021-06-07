@@ -9,5 +9,6 @@ package database;
  */
 
 public final class DataBaseConnection {
-    private final String USER = "root";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
 }
