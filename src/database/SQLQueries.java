@@ -28,6 +28,6 @@ public class SQLQueries {
     }
 
     public static String updateAttendanceDateQuery(){
-
+        return "UPDATE " + ATTENDANCE_TABLE + " SET " + DATE + " = ? WHERE " + ID + " = ?";
     }
 }
