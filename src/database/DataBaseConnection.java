@@ -11,5 +11,7 @@ package database;
 public final class DataBaseConnection {
     private static final String USER = "root";
     private static final String PASSWORD = "";
-    private static final String URL = "";
+    private static final String URL = "jdbc:mysql://localhost:3306/attendance_management";
+
+    private DataBaseConnection(){}
 }
