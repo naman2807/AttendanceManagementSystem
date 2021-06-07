@@ -8,5 +8,5 @@ package database;
  * Date: 07-06-2021
  */
 
-public class DataBaseConnection {
+public final class DataBaseConnection {
 }
