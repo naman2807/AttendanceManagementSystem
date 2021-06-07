@@ -12,11 +12,18 @@ import javafx.beans.property.SimpleStringProperty;
  */
 
 public class Candidate {
-    private SimpleStringProperty name = new SimpleStringProperty("");
-    private SimpleLongProperty phoneNumber = new SimpleLongProperty();
-    private SimpleStringProperty id = new SimpleStringProperty("");
-    private SimpleStringProperty address = new SimpleStringProperty("");
+    private final SimpleStringProperty name = new SimpleStringProperty("");
+    private final SimpleLongProperty phoneNumber = new SimpleLongProperty();
+    private final SimpleStringProperty id = new SimpleStringProperty("");
+    private final SimpleStringProperty address = new SimpleStringProperty("");
 
     public Candidate() {
+    }
+
+    public Candidate(String name, long phoneNumber, String id, String address){
+        this.name.set(name);
+        this.phoneNumber.set(phoneNumber);
+        this.id.set(id);
+        this.address.set(address);
     }
 }
