@@ -89,4 +89,14 @@ public class Candidate {
     public int hashCode() {
         return Objects.hash(name, phoneNumber, id, address);
     }
+
+    @Override
+    public String toString() {
+        return "Candidate{" +
+                "name=" + name +
+                ", phoneNumber=" + phoneNumber +
+                ", id=" + id +
+                ", address=" + address +
+                '}';
+    }
 }
