@@ -14,4 +14,8 @@ public final class DataBaseConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/attendance_management";
 
     private DataBaseConnection(){}
+
+    public static DataBaseConnection getInstance(){
+
+    }
 }
