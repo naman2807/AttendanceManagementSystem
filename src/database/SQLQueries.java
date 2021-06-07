@@ -23,6 +23,6 @@ public class SQLQueries {
     }
 
     public static String updateAttendanceStatusQuery(){
-
+        return "UPDATE " + ATTENDANCE_TABLE + " SET " + STATUS + " = ? WHERE " + ID + " = ?";
     }
 }
