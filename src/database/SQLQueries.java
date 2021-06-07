@@ -15,6 +15,6 @@ public class SQLQueries {
     private static final String STATUS = "status";
 
     public static String insertCandidateQuery(){
-
+        return "INSERT INTO " + CANDIDATE_TABLE + " VALUES(?, ?, ?, ?)";
     }
 }
