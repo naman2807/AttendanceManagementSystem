@@ -14,4 +14,5 @@ import javafx.beans.property.SimpleStringProperty;
 public class Candidate {
     private SimpleStringProperty name = new SimpleStringProperty("");
     private SimpleLongProperty phoneNumber = new SimpleLongProperty();
+    private SimpleStringProperty id = new SimpleStringProperty("");
 }
