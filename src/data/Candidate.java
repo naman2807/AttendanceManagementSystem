@@ -26,4 +26,52 @@ public class Candidate {
         this.id.set(id);
         this.address.set(address);
     }
+
+    public String getName() {
+        return name.get();
+    }
+
+    public SimpleStringProperty nameProperty() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber.get();
+    }
+
+    public SimpleLongProperty phoneNumberProperty() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber.set(phoneNumber);
+    }
+
+    public String getId() {
+        return id.get();
+    }
+
+    public SimpleStringProperty idProperty() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id.set(id);
+    }
+
+    public String getAddress() {
+        return address.get();
+    }
+
+    public SimpleStringProperty addressProperty() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address.set(address);
+    }
 }
