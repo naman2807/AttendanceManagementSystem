@@ -13,6 +13,7 @@ public class SQLQueries {
     private static final String ID = "id";
     private static final String ATTENDANCE_TABLE = "attendance";
     private static final String STATUS = "status";
+    private static final String DATE = "date";
 
     public static String insertCandidateQuery(){
         return "INSERT INTO " + CANDIDATE_TABLE + " VALUES(?, ?, ?, ?)";
