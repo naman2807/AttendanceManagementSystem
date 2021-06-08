@@ -1,9 +1,12 @@
 package database;
 
+import alert.MyAlert;
 import data.Candidate;
+import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -21,6 +24,11 @@ public class DataSource {
         preparedStatement.setString(2, candidate.getPhoneNumber());
         preparedStatement.setString(3, candidate.getId());
         preparedStatement.setString(4, candidate.getAddress());
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if(resultSet.next()){
+            MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
+                    candidate.getId(), "Candidate has been added to record.");
+        }
     }
 
 }
