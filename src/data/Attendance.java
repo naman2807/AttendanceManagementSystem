@@ -17,4 +17,10 @@ public class Attendance{
 
     public Attendance() {
     }
+
+    public Attendance(String id, String status, String date){
+        this.id.set(id);
+        this.status.set(status);
+        this.date.set(date);
+    }
 }
