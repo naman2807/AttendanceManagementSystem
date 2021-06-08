@@ -9,4 +9,5 @@ package alert;
  */
 
 public final class MyAlert {
+    private MyAlert(){}
 }
