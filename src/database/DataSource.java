@@ -19,6 +19,7 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertCandidateQuery());
         preparedStatement.setString(1, candidate.getName());
         preparedStatement.setString(2, candidate.getPhoneNumber());
+        preparedStatement.setString(3, candidate.getId());
     }
 
 }
