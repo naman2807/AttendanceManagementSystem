@@ -2,7 +2,6 @@ package formatter;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 /**
  * Created By: Naman Agarwal
@@ -13,11 +12,10 @@ import java.util.Date;
  */
 
 public class DateFormatter {
-    private DateFormatter(){}
+    private DateFormatter() {
+    }
 
-    public static String getCurrentFormattedDate(){
-        LocalDate date = LocalDate.now();
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd, MMMM yyyy");
-        return dateFormatter.format(date);
+    public static String getCurrentFormattedDate() {
+        return DateTimeFormatter.ofPattern("dd,MMMM yyyy").format(LocalDate.now());
     }
 }
