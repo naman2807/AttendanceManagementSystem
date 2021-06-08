@@ -1,5 +1,7 @@
 package formatter;
 
+import java.util.Date;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -9,7 +11,9 @@ package formatter;
  */
 
 public class DateFormatter {
-   private DateFormatter dateFormatter = new DateFormatter();
+    private DateFormatter(){}
 
-   private DateFormatter(){}
+    public static String getCurrentFormattedDate(){
+        return null;
+    }
 }
