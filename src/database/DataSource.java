@@ -20,6 +20,7 @@ public class DataSource {
         preparedStatement.setString(1, candidate.getName());
         preparedStatement.setString(2, candidate.getPhoneNumber());
         preparedStatement.setString(3, candidate.getId());
+        preparedStatement.setString(4, candidate.getAddress());
     }
 
 }
