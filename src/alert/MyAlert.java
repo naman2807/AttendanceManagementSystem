@@ -1,6 +1,9 @@
 package alert;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
+import java.util.Optional;
 
 /**
  * Created By: Naman Agarwal
@@ -18,5 +21,9 @@ public final class MyAlert {
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.setContentText(content);
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.isPresent() && result.get() == ButtonType.OK){
+            alert.close();
+        }
     }
 }
