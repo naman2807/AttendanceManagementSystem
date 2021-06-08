@@ -19,15 +19,11 @@ public class SQLQueries {
         return "INSERT INTO " + CANDIDATE_TABLE + " VALUES(?, ?, ?, ?)";
     }
 
-    public static String insertNewAttendanceCandidateQuery(){
-        return "INSERT INTO " + ATTENDANCE_TABLE + "(" + ID + ") VALUES (?)";
+    public static String insertNewAttendanceQuery(){
+        return "INSERT INTO " + ATTENDANCE_TABLE + " VALUES (?, ?, ?)";
     }
 
     public static String updateAttendanceStatusQuery(){
         return "UPDATE " + ATTENDANCE_TABLE + " SET " + STATUS + " = ? WHERE " + ID + " = ?";
-    }
-
-    public static String updateAttendanceDateQuery(){
-        return "UPDATE " + ATTENDANCE_TABLE + " SET " + DATE + " = ? WHERE " + ID + " = ?";
     }
 }
