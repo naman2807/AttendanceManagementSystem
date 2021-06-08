@@ -15,6 +15,7 @@ public final class MyAlert {
 
     public static void createAlert(Alert.AlertType alertType, String title, String headerText, String content){
         Alert alert = new Alert(alertType);
+        alert.setTitle(title);
 
     }
 }
