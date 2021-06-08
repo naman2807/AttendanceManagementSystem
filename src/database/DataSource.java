@@ -28,6 +28,9 @@ public class DataSource {
         if(resultSet.next()){
             MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
                     candidate.getId(), "Candidate has been added to record.");
+        }else {
+            MyAlert.createAlert(Alert.AlertType.ERROR, "FAILED","CANDIDATE ID: " +
+                     candidate.getId(), "Cannot add candidate to database.");
         }
     }
 
