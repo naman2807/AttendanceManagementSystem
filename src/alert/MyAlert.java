@@ -17,5 +17,6 @@ public final class MyAlert {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(headerText);
+        alert.setContentText(content);
     }
 }
