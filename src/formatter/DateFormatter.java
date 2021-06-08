@@ -9,4 +9,5 @@ package formatter;
  */
 
 public class DateFormatter {
+   private DateFormatter dateFormatter = new DateFormatter();
 }
