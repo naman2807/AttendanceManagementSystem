@@ -74,4 +74,13 @@ public class Attendance{
     public int hashCode() {
         return Objects.hash(id, status, date);
     }
+
+    @Override
+    public String toString() {
+        return "Attendance{" +
+                "id=" + id +
+                ", status=" + status +
+                ", date=" + date +
+                '}';
+    }
 }
