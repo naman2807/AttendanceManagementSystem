@@ -1,5 +1,6 @@
 package formatter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -14,6 +15,7 @@ public class DateFormatter {
     private DateFormatter(){}
 
     public static String getCurrentFormattedDate(){
+        LocalDate date = LocalDate.now();
         return null;
     }
 }
