@@ -8,5 +8,5 @@ package alert;
  * Date: 08-06-2021
  */
 
-public class MyAlert {
+public final class MyAlert {
 }
