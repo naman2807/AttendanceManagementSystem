@@ -2,6 +2,10 @@ package database;
 
 import data.Candidate;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -11,7 +15,8 @@ import data.Candidate;
  */
 
 public class DataSource {
-    public static void addCandidate(Candidate candidate){
+    public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertCandidateQuery());
 
     }
 
