@@ -13,4 +13,5 @@ import javafx.beans.property.SimpleStringProperty;
 public class Attendance{
     private SimpleStringProperty id = new SimpleStringProperty("");
     private SimpleStringProperty status = new SimpleStringProperty("");
+    private SimpleStringProperty date = new SimpleStringProperty("");
 }
