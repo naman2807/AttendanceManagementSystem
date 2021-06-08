@@ -1,5 +1,7 @@
 package database;
 
+import data.Candidate;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -9,4 +11,7 @@ package database;
  */
 
 public class DataSource {
+    public static void addCandidate(Candidate candidate){
+
+    }
 }
