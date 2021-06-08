@@ -1,6 +1,7 @@
 package formatter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -16,6 +17,7 @@ public class DateFormatter {
 
     public static String getCurrentFormattedDate(){
         LocalDate date = LocalDate.now();
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd, MMMM yyyy");
         return null;
     }
 }
