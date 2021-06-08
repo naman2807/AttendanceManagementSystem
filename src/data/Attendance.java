@@ -2,6 +2,8 @@ package data;
 
 import javafx.beans.property.SimpleStringProperty;
 
+import java.util.Objects;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -11,9 +13,9 @@ import javafx.beans.property.SimpleStringProperty;
  */
 
 public class Attendance{
-    private SimpleStringProperty id = new SimpleStringProperty("");
-    private SimpleStringProperty status = new SimpleStringProperty("");
-    private SimpleStringProperty date = new SimpleStringProperty("");
+    private final SimpleStringProperty id = new SimpleStringProperty("");
+    private final SimpleStringProperty status = new SimpleStringProperty("");
+    private final SimpleStringProperty date = new SimpleStringProperty("");
 
     public Attendance() {
     }
@@ -58,5 +60,18 @@ public class Attendance{
 
     public void setDate(String date) {
         this.date.set(date);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Attendance that = (Attendance) o;
+        return Objects.equals(id, that.id) && Objects.equals(status, that.status) && Objects.equals(date, that.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, status, date);
     }
 }
