@@ -25,6 +25,7 @@ public class LoginWindow extends Application {
         stage = primaryStage;
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         primaryStage.setTitle("Log In");
+        primaryStage.setScene(new Scene(root, 900, 600));
 
     }
 }
