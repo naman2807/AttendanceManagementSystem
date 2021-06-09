@@ -1,5 +1,6 @@
 package gui;
 
+import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
@@ -10,7 +11,7 @@ import javafx.stage.Stage;
  * Date: 09-06-2021
  */
 
-public class LoginWindow {
+public class LoginWindow extends Application {
     private Stage stage;
 
 }
