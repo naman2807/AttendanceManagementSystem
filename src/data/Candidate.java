@@ -2,6 +2,7 @@ package data;
 
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.CheckBox;
 
 import java.util.Objects;
 
@@ -18,11 +19,19 @@ public class Candidate {
     private final SimpleStringProperty phoneNumber = new SimpleStringProperty("");
     private final SimpleStringProperty id = new SimpleStringProperty("");
     private final SimpleStringProperty address = new SimpleStringProperty("");
+    private CheckBox status;
 
     public Candidate() {
     }
 
     public Candidate(String name, String phoneNumber, String id, String address){
+        this.name.set(name);
+        this.phoneNumber.set(phoneNumber);
+        this.id.set(id);
+        this.address.set(address);
+    }
+
+    public Candidate(String name, String phoneNumber, String id, String address, boolean attendance){
         this.name.set(name);
         this.phoneNumber.set(phoneNumber);
         this.id.set(id);
