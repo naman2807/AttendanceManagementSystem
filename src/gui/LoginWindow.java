@@ -29,4 +29,8 @@ public class LoginWindow extends Application {
         primaryStage.show();
         DataBaseConnection.connectToDataBase();
     }
+
+    public static Stage getStage(){
+
+    }
 }
