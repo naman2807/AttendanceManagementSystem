@@ -31,12 +31,20 @@ public class Candidate {
         this.address.set(address);
     }
 
-    public Candidate(String name, String phoneNumber, String id, String address, boolean attendance){
+    public Candidate(String name, String phoneNumber, String id, String address, String attendance){
         this.name.set(name);
         this.phoneNumber.set(phoneNumber);
         this.id.set(id);
         this.address.set(address);
         this.status = new CheckBox();
+    }
+
+    public CheckBox getStatus() {
+        return status;
+    }
+
+    public void setStatus(CheckBox status) {
+        this.status = status;
     }
 
     public String getName() {
