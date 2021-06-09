@@ -27,6 +27,6 @@ public class LoginWindow extends Application {
         primaryStage.setTitle("Log In");
         primaryStage.setScene(new Scene(root, 900, 600));
         primaryStage.show();
-
+        DataBaseConnection.connectToDataBase();
     }
 }
