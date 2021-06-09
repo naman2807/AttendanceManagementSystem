@@ -18,7 +18,7 @@ import java.util.Objects;
  */
 
 public class LoginWindow extends Application {
-    private Stage stage;
+    private static Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -31,6 +31,6 @@ public class LoginWindow extends Application {
     }
 
     public static Stage getStage(){
-
+        return stage;
     }
 }
