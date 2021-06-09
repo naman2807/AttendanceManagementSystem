@@ -33,4 +33,8 @@ public class LoginWindow extends Application {
     public static Stage getStage(){
         return stage;
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
