@@ -1,5 +1,7 @@
 package gui;
 
+import javafx.stage.Stage;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -8,5 +10,7 @@ package gui;
  * Date: 09-06-2021
  */
 
-public class Main {
+public class LoginWindow {
+    private Stage stage;
+
 }
