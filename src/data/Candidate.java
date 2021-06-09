@@ -36,6 +36,7 @@ public class Candidate {
         this.phoneNumber.set(phoneNumber);
         this.id.set(id);
         this.address.set(address);
+        this.status = new CheckBox();
     }
 
     public String getName() {
