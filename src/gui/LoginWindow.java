@@ -14,4 +14,8 @@ import javafx.stage.Stage;
 public class LoginWindow extends Application {
     private Stage stage;
 
+    @Override
+    public void start(Stage stage) throws Exception {
+
+    }
 }
