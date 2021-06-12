@@ -2,6 +2,7 @@ package database;
 
 import alert.MyAlert;
 import data.Candidate;
+import gui.LoginWindow;
 import javafx.scene.control.Alert;
 
 import java.sql.Connection;
@@ -25,16 +26,16 @@ public class DataSource {
         ResultSet resultSet = preparedStatement.executeQuery();
         if(!resultSet.next()){
             MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
-                    "Account with username: " + userId + " does not exist.");
+                    "Account with USERNAME: " + userId + " does not exist.");
             return;
         }
+        resultSet.previous();
         while (resultSet.next()){
             if(userId.equals(resultSet.getString(1)) && password.equals(resultSet.getString(2))){
-                MyAlert.createAlert(Alert.AlertType.CONFIRMATION,"SUCCESS", "LOGGED IN!",
-                        "User ID: " + userId + " had logged in successfully.");
+                LoginWindow.getStage().close();
             }else {
                 MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
-                        "Kindly check your password.");
+                        "Kindly check your  password.");
             }
         }
     }

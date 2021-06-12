@@ -32,9 +32,9 @@ public class MainController {
     @FXML
     public void handleKeyReleased(){
         if(!userID.getText().isEmpty() && !userID.getText().trim().isEmpty()){
-            if(!password.getText().isEmpty() && !password.getText().trim().isEmpty()){
-                login.setDisable(false);
-            }
+            login.setDisable(password.getText().isEmpty() || password.getText().trim().isEmpty());
+        }else {
+            login.setDisable(true);
         }
     }
 
