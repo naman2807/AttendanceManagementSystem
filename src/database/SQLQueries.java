@@ -29,6 +29,6 @@ public class SQLQueries {
     }
 
     public static String loginQuery(){
-
+        return "SELECT * FROM " + USERNAME_PASSWORD_TABLE + " WHERE " + USERNAME + " = ?";
     }
 }
