@@ -1,9 +1,13 @@
 package gui;
 
+import database.DataBaseConnection;
+import database.DataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+
+import java.sql.SQLException;
 
 /**
  * Created By: Naman Agarwal
@@ -26,17 +30,22 @@ public class MainController {
     }
 
     @FXML
-    public void handleMouseClick(ActionEvent event){
+    public void handleKeyPressed(){
+
+    }
+
+    @FXML
+    public void handleMouseClick(ActionEvent event) throws SQLException {
         if(event.getSource() == login){
             login();
         }
     }
 
-    private void login(){
+
+
+    private void login() throws SQLException {
         String user = userID.getText();
         String pass = password.getText();
-        if(!user.isEmpty() && !pass.isEmpty() && !user.trim().isEmpty() && !pass.trim().isEmpty()){
-            login.setDisable(false);
-        }
+        DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass);
     }
 }
