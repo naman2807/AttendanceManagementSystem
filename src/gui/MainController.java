@@ -31,10 +31,6 @@ public class MainController {
     @FXML
     private TextField password;
 
-    public void initialize(){
-        login.setDisable(true);
-    }
-
     @FXML
     public void handleKeyReleased(){
         if(!userID.getText().isEmpty() && !userID.getText().trim().isEmpty()){
@@ -54,8 +50,9 @@ public class MainController {
     private void login() throws SQLException, IOException {
         String user = userID.getText();
         String pass = password.getText();
-        DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass);
-        showMainWindow();
+        if(DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass)){
+            showMainWindow();
+        }
     }
 
 
