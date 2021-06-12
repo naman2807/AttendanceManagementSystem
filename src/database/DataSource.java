@@ -22,6 +22,7 @@ public class DataSource {
     public static void loginIntoSystem(Connection connection, String userId, String password) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.loginQuery());
         preparedStatement.setString(1, userId);
+        ResultSet resultSet = preparedStatement.executeQuery();
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
