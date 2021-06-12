@@ -4,11 +4,15 @@ import database.DataBaseConnection;
 import database.DataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 /**
  * Created By: Naman Agarwal
@@ -40,13 +44,13 @@ public class MainController {
     }
 
     @FXML
-    public void handleMouseClick(ActionEvent event) throws SQLException {
+    public void handleMouseClick(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == login){
             login();
         }
     }
 
-    private void login() throws SQLException {
+    private void login() throws SQLException, IOException {
         String user = userID.getText();
         String pass = password.getText();
         DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass);
@@ -54,7 +58,8 @@ public class MainController {
     }
 
 
-    private void showMainWindow(){
+    private void showMainWindow() throws IOException {
         Stage stage = new Stage();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainwindow.fxml")));
     }
 }
