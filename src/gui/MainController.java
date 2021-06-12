@@ -22,7 +22,7 @@ public class MainController {
     private TextField password;
 
     public void initialize(){
-
+        login.setDisable(true);
     }
 
     @FXML
