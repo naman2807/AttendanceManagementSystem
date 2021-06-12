@@ -19,8 +19,8 @@ import java.sql.SQLException;
 
 public class DataSource {
 
-    public static void loginIntoSystem(Connection connection, String userId, String password){
-
+    public static void loginIntoSystem(Connection connection, String userId, String password) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.loginQuery());
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
