@@ -33,6 +33,6 @@ public class MainController {
     }
 
     private void login(){
-
+        String user = userID.getText();
     }
 }
