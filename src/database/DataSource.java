@@ -31,7 +31,7 @@ public class DataSource {
         }
         resultSet.previous();
         while (resultSet.next()){
-            if(userId.equals(resultSet.getString(1)) && password.equals(resultSet.getString(2))){
+            if(userId.equalsIgnoreCase(resultSet.getString(1)) && password.equalsIgnoreCase(resultSet.getString(2))){
                 LoginWindow.getStage().close();
                 return true;
             }else {
