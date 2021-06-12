@@ -1,5 +1,6 @@
 package gui;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -19,4 +20,9 @@ public class MainController {
     private TextField userID;
     @FXML
     private TextField password;
+
+    @FXML
+    public void handleMouseClick(ActionEvent event){
+
+    }
 }
