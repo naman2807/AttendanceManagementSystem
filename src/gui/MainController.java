@@ -35,5 +35,8 @@ public class MainController {
     private void login(){
         String user = userID.getText();
         String pass = password.getText();
+        if(!user.isEmpty() && !pass.isEmpty() && !user.trim().isEmpty() && !pass.trim().isEmpty()){
+            login.setDisable(false);
+        }
     }
 }
