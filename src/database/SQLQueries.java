@@ -15,6 +15,7 @@ public class SQLQueries {
     private static final String STATUS = "status";
     private static final String DATE = "date";
     private static final String USERNAME_PASSWORD_TABLE = "username_password";
+    private static final String USERNAME = "userid";
 
     public static String insertCandidateQuery(){
         return "INSERT INTO " + CANDIDATE_TABLE + " VALUES(?, ?, ?, ?)";
