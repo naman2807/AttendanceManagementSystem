@@ -2,6 +2,7 @@ package gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * Created By: Naman Agarwal
@@ -14,4 +15,6 @@ import javafx.scene.control.Button;
 public class MainController {
     @FXML
     private Button login;
+    @FXML
+    private TextField userID;
 }
