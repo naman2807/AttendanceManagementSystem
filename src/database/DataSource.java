@@ -28,6 +28,11 @@ public class DataSource {
                     "Account with username: " + userId + " does not exist.");
             return;
         }
+        while (resultSet.next()){
+            if(userId.equals(resultSet.getString(1)) && password.equals(resultSet.getString(2))){
+
+            }
+        }
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
