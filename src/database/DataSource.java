@@ -30,7 +30,8 @@ public class DataSource {
         }
         while (resultSet.next()){
             if(userId.equals(resultSet.getString(1)) && password.equals(resultSet.getString(2))){
-
+                MyAlert.createAlert(Alert.AlertType.CONFIRMATION,"SUCCESS", "LOGGED IN!",
+                        "User ID: " + userId + " had logged in successfully.");
             }
         }
     }
