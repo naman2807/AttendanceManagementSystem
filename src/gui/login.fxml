@@ -100,7 +100,8 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Button fx:id="login" mnemonicParsing="false" prefWidth="100.0" text="Log In" textFill="#0708eb">
+                <Button fx:id="login" mnemonicParsing="false" prefWidth="100.0"
+                        onAction="#handleMouseClick" text="Log In" textFill="#0708eb">
                     <font>
                         <Font name="Algerian" size="12.0" />
                     </font>
