@@ -24,7 +24,8 @@ public class DataSource {
         preparedStatement.setString(1, userId);
         ResultSet resultSet = preparedStatement.executeQuery();
         if(!resultSet.next()){
-
+            MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
+                    "Account with username: " + userId + " does not exist.");
         }
     }
 
