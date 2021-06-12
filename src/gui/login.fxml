@@ -13,6 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.PasswordField?>
 <BorderPane fx:controller="gui.MainController"
             maxHeight="-Infinity" maxWidth="-Infinity"
             minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0"
@@ -78,7 +79,7 @@
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField onKeyReleased="#handleKeyReleased" fx:id="password" promptText="Password">
+                <PasswordField onKeyReleased="#handleKeyReleased" fx:id="password" promptText="Password">
                     <font>
                         <Font name="Candara" size="14.0" />
                     </font>
@@ -88,7 +89,7 @@
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
-                </TextField>
+                </PasswordField>
                 <Label text="Forgot Password?" textFill="#e42323">
                     <font>
                         <Font name="Bell MT" size="12.0" />
