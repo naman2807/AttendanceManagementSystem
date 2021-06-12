@@ -64,5 +64,6 @@ public class MainController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainwindow.fxml")));
         stage.setTitle("Attendance Management Portal");
         stage.setScene(new Scene(root, 800, 700));
+        stage.show();
     }
 }
