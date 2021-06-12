@@ -78,7 +78,7 @@
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField promptText="Password">
+                <TextField fx:id="password" promptText="Password">
                     <font>
                         <Font name="Candara" size="14.0" />
                     </font>
