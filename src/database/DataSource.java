@@ -26,6 +26,7 @@ public class DataSource {
         if(!resultSet.next()){
             MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
                     "Account with username: " + userId + " does not exist.");
+            return;
         }
     }
 
