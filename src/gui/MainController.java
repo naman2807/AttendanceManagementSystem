@@ -17,4 +17,6 @@ public class MainController {
     private Button login;
     @FXML
     private TextField userID;
+    @FXML
+    private TextField password;
 }
