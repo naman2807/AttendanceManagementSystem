@@ -24,7 +24,11 @@ public class MainController {
     @FXML
     public void handleMouseClick(ActionEvent event){
         if(event.getSource() == login){
-            String user = userID.getText();
+
         }
+    }
+
+    private void login(){
+
     }
 }
