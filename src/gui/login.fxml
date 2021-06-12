@@ -67,7 +67,7 @@
                         <Font name="Book Antiqua Bold Italic" size="13.0" />
                     </font>
                 </Label>
-                <TextField fx:id="userID" promptText="User ID">
+                <TextField onKeyReleased="#handleKeyReleased" fx:id="userID" promptText="User ID">
                     <font>
                         <Font name="Candara" size="14.0" />
                     </font>

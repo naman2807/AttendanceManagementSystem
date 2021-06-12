@@ -30,7 +30,7 @@ public class MainController {
     }
 
     @FXML
-    public void handleKeyPressed(){
+    public void handleKeyReleased(){
         if(!userID.getText().isEmpty() && !userID.getText().trim().isEmpty()){
             if(!password.getText().isEmpty() && !password.getText().trim().isEmpty()){
                 login.setDisable(false);
@@ -44,8 +44,6 @@ public class MainController {
             login();
         }
     }
-
-
 
     private void login() throws SQLException {
         String user = userID.getText();
