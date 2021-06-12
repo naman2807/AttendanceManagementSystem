@@ -31,7 +31,11 @@ public class MainController {
 
     @FXML
     public void handleKeyPressed(){
-
+        if(!userID.getText().isEmpty() && !userID.getText().trim().isEmpty()){
+            if(!password.getText().isEmpty() && !password.getText().trim().isEmpty()){
+                login.setDisable(false);
+            }
+        }
     }
 
     @FXML
