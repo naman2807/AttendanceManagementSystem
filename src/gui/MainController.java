@@ -1,5 +1,8 @@
 package gui;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -9,4 +12,6 @@ package gui;
  */
 
 public class MainController {
+    @FXML
+    private Button login;
 }
