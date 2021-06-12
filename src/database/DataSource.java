@@ -23,6 +23,9 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.loginQuery());
         preparedStatement.setString(1, userId);
         ResultSet resultSet = preparedStatement.executeQuery();
+        if(!resultSet.next()){
+
+        }
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
