@@ -20,24 +20,27 @@ import java.sql.SQLException;
 
 public class DataSource {
 
-    public static void loginIntoSystem(Connection connection, String userId, String password) throws SQLException {
+    public static boolean loginIntoSystem(Connection connection, String userId, String password) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.loginQuery());
         preparedStatement.setString(1, userId);
         ResultSet resultSet = preparedStatement.executeQuery();
         if(!resultSet.next()){
             MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
                     "Account with USERNAME: " + userId + " does not exist.");
-            return;
+            return false;
         }
         resultSet.previous();
         while (resultSet.next()){
             if(userId.equals(resultSet.getString(1)) && password.equals(resultSet.getString(2))){
                 LoginWindow.getStage().close();
+                return true;
             }else {
                 MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
                         "Kindly check your  password.");
+                return false;
             }
         }
+        return false;
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
