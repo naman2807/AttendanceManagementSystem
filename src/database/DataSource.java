@@ -40,10 +40,6 @@ public class DataSource {
         }
     }
 
-    private void showMainWindow(){
-
-    }
-
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertCandidateQuery());
         preparedStatement.setString(1, candidate.getName());

@@ -49,5 +49,11 @@ public class MainController {
         String user = userID.getText();
         String pass = password.getText();
         DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass);
+        showMainWindow();
+    }
+
+
+    private void showMainWindow(){
+
     }
 }
