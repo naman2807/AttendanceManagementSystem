@@ -21,6 +21,10 @@ public class MainController {
     @FXML
     private TextField password;
 
+    public void initialize(){
+
+    }
+
     @FXML
     public void handleMouseClick(ActionEvent event){
         if(event.getSource() == login){
