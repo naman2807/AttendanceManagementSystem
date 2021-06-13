@@ -4,4 +4,5 @@ It is very difficult to maintain large records manually. However, it becomes ver
 This project aims at maintaining attendance large number of candidates.
 # Modules
 1. Login Module: User will be having an ID and password with the help of which he/she can login into the software. This facility is available to only institute authority members.
+2. Add New Candidate: The user will have the authority to add new candidate to record.
 
