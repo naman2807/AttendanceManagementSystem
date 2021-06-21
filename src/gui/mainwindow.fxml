@@ -101,6 +101,19 @@
                         <Label layoutX="38.0" layoutY="76.0" text="Mark Attendance" />
                     </children>
                     <HBox.margin>
+                        <Insets bottom="20.0" left="70.0" top="20.0" />
+                    </HBox.margin>
+                </Pane>
+                <Pane layoutX="368.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="51.0" fitWidth="61.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../rec.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="38.0" layoutY="76.0" text="Show Attendance" />
+                    </children>
+                    <HBox.margin>
                         <Insets bottom="20.0" left="80.0" top="20.0" />
                     </HBox.margin>
                 </Pane>
