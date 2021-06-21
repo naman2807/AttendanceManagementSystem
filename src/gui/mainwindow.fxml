@@ -85,7 +85,7 @@
                     <children>
                         <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="50.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../user.png" />
+                                <Image url="@user.png" />
                             </image>
                         </ImageView>
                         <Label layoutX="38.0" layoutY="76.0" text="Add Candidate" />
@@ -95,7 +95,7 @@
                     <children>
                         <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="40.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../att.png" />
+                                <Image url="@att.png" />
                             </image>
                         </ImageView>
                         <Label layoutX="38.0" layoutY="76.0" text="Mark Attendance" />
@@ -108,7 +108,7 @@
                     <children>
                         <ImageView fitHeight="51.0" fitWidth="61.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../rec.png" />
+                                <Image url="@rec.png" />
                             </image>
                         </ImageView>
                         <Label layoutX="38.0" layoutY="76.0" text="Show Attendance" />
