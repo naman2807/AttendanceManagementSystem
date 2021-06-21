@@ -76,7 +76,7 @@
                 </Pane>
             </children>
         </HBox>
-        <HBox layoutY="216.0" prefHeight="153.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773">
+        <HBox layoutY="296.0" prefHeight="153.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773">
             <children>
                 <Pane prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
                     <HBox.margin>
@@ -91,7 +91,25 @@
                         <Label layoutX="38.0" layoutY="76.0" text="Add Candidate" />
                     </children>
                 </Pane>
+                <Pane layoutX="110.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="40.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../att.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="38.0" layoutY="76.0" text="Mark Attendance" />
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="80.0" top="20.0" />
+                    </HBox.margin>
+                </Pane>
             </children>
         </HBox>
+        <Label layoutX="24.0" layoutY="281.0" text="Actions:" textFill="#350bec">
+            <font>
+                <Font name="Algerian" size="24.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>
