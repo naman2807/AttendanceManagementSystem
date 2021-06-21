@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -18,5 +19,36 @@
                 <Label layoutX="34.0" layoutY="55.0" text="Attendance Management" textFill="#ea1010" />
             </children>
         </Pane>
+        <HBox layoutY="100.0" prefHeight="100.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773">
+            <children>
+                <Pane prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #9183E8FF;">
+                    <HBox.margin>
+                        <Insets bottom="30.0" left="10.0" top="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <Label layoutX="32.0" text="100" textFill="#f7e9e9">
+                            <font>
+                                <Font name="Bodoni MT Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="35.0" text="Total Students" textFill="#efe9e9">
+                            <font>
+                                <Font name="Cambria" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="20.0" layoutY="20.0" prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #1CE24EFF;">
+                    <HBox.margin>
+                        <Insets bottom="30.0" left="150.0" top="10.0" />
+                    </HBox.margin>
+                </Pane>
+                <Pane layoutX="311.0" layoutY="20.0" prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #E83C3CFF;">
+                    <HBox.margin>
+                        <Insets bottom="30.0" left="160.0" top="10.0" />
+                    </HBox.margin>
+                </Pane>
+            </children>
+        </HBox>
     </children>
 </AnchorPane>
