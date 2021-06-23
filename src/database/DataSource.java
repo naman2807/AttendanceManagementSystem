@@ -62,7 +62,7 @@ public class DataSource {
     private boolean validateCandidate(Connection connection, Candidate candidate) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.searchCandidateQuery());
         preparedStatement.setString(1, candidate.getId());
-        return false;
+        return preparedStatement.execute();
     }
 
 }
