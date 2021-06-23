@@ -78,7 +78,7 @@
             </children>
         </HBox>
         <Button layoutX="314.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0"
-                prefWidth="95.0"
+                prefWidth="95.0" stylesheets="@attendance.css"
                 AnchorPane.topAnchor="390.0" />
     </children>
 </AnchorPane>
