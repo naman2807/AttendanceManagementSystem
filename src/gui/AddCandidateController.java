@@ -37,4 +37,8 @@ public class AddCandidateController {
         String cPhone = phoneNumber.getText();
         String cAddress = address.getText();
     }
+
+    private String generateID(String name, String number){
+
+    }
 }
