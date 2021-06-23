@@ -30,7 +30,9 @@
                     <font>
                         <Font name="Bookman Old Style Italic" size="24.0" />
                     </font>
-
+                    <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                    </HBox.margin>
                 </Label>
             </children>
         </HBox>
