@@ -45,7 +45,7 @@ public class AddCandidateController {
     private String generateID(String name, String number){
         char[] nameArray = name.toCharArray();
         char[] phoneArray = number.toCharArray();
-
+        StringBuilder stringBuilder = new StringBuilder();
         return String.valueOf(name.toCharArray()[0] + number.toCharArray()[0] +
                 number.toCharArray()[1] + number.toCharArray()[2] + new Random().nextInt(100));
     }
