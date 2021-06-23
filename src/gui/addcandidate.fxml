@@ -53,7 +53,9 @@
                     </HBox.margin>
                 </Label>
                 <TextField prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Phone Number">
-
+                    <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </HBox.margin>
                 </TextField>
             </children>
         </HBox>
