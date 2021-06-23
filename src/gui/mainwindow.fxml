@@ -82,7 +82,7 @@
         </HBox>
         <HBox layoutY="296.0" prefHeight="153.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773">
             <children>
-                <Pane fx:id="addCandidate" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
+                <Pane fx:id="addCandidate" onMouseClicked="#handleMouseClick" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
                     <HBox.margin>
                         <Insets bottom="20.0" left="100.0" right="20.0" top="20.0" />
                     </HBox.margin>

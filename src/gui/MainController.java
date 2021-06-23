@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -45,13 +46,13 @@ public class MainController {
     }
 
     @FXML
-    public void handleMouseClick(ActionEvent event) throws SQLException, IOException {
+    public void handleMouseClick(MouseEvent event) throws SQLException, IOException {
         if(event.getSource() == login){
             login();
         }
     }
 
-    private void login() throws SQLException, IOException {
+    public void login() throws SQLException, IOException {
         String user = userID.getText();
         String pass = password.getText();
         if(DataSource.loginIntoSystem(DataBaseConnection.getConnection(), user, pass)){
