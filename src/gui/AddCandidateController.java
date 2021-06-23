@@ -17,4 +17,6 @@ public class AddCandidateController {
     private TextField name;
     @FXML
     private TextField phoneNumber;
+    @FXML
+    private TextField address;
 }
