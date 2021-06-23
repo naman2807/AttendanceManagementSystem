@@ -49,9 +49,8 @@ public class DataSource {
         preparedStatement.setString(2, candidate.getPhoneNumber());
         preparedStatement.setString(3, candidate.getId());
         preparedStatement.setString(4, candidate.getAddress());
-        boolean result =  preparedStatement.execute();
-//        ResultSet resultSet = preparedStatement.executeQuery();
-        if(result) {
+        int result = preparedStatement.executeUpdate();
+        if(result == 1) {
             MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
                     candidate.getId(), "Candidate has been added to record.");
         } else {

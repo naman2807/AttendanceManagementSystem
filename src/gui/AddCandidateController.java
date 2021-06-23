@@ -40,13 +40,16 @@ public class AddCandidateController {
         String cAddress = address.getText();
         DataSource.addCandidate(DataBaseConnection.getConnection(), new Candidate(cName, cPhone,generateID(cName,
                         cPhone),cAddress));
+        name.clear();
+        phoneNumber.clear();
+        address.clear();
     }
 
     private String generateID(String name, String number){
         char[] nameArray = name.toCharArray();
         char[] phoneArray = number.toCharArray();
         StringBuilder stringBuilder = new StringBuilder();
-        return String.valueOf(name.toCharArray()[0] + number.toCharArray()[0] +
-                number.toCharArray()[1] + number.toCharArray()[2] + new Random().nextInt(100));
+        stringBuilder.append(nameArray[0]).append(nameArray[1]).append(phoneArray[0]).append(phoneArray[1]);
+        return stringBuilder.toString();
     }
 }
