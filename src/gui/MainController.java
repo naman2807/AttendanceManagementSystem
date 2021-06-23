@@ -55,7 +55,7 @@ public class MainController {
     private void addCandidateToRecord() throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addcandidate.fxml")));
+        loader.setLocation(getClass().getResource("addcandidate.fxml"));
         stage.setTitle("Add Candidate");
         stage.setScene(new Scene());
     }
