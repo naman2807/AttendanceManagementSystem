@@ -48,7 +48,7 @@ public class MainController {
     @FXML
     public void handleMouseClick(MouseEvent event) throws SQLException, IOException {
         if(event.getSource() == addCandidate){
-
+            addCandidateToRecord();
         }
     }
 
