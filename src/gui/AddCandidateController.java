@@ -1,10 +1,14 @@
 package gui;
 
+import data.Candidate;
+import database.DataBaseConnection;
+import database.DataSource;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
 
+import java.sql.SQLException;
 import java.util.Random;
 
 /**
@@ -26,18 +30,16 @@ public class AddCandidateController {
     private Button addCandidate;
 
     public void handleKeyReleased(){
-        if(name.getText().isEmpty() || name.getText().trim().isEmpty() || phoneNumber.getText().isEmpty()
-        || phoneNumber.getText().trim().isEmpty() || address.getText().isEmpty() || address.getText().trim().isEmpty()){
-            addCandidate.setDisable(true);
-        }else {
-            addCandidate.setDisable(false);
-        }
+        addCandidate.setDisable(name.getText().isEmpty() || name.getText().trim().isEmpty() || phoneNumber.getText().isEmpty()
+                || phoneNumber.getText().trim().isEmpty() || address.getText().isEmpty() || address.getText().trim().isEmpty());
     }
 
-    public void addCandidate(){
+    public void addCandidate() throws SQLException {
         String cName = name.getText();
         String cPhone = phoneNumber.getText();
         String cAddress = address.getText();
+        DataSource.addCandidate(DataBaseConnection.getConnection(), new Candidate(cName, cPhone,generateID(cName,
+                        cPhone),cAddress));
     }
 
     private String generateID(String name, String number){
