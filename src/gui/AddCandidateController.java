@@ -1,6 +1,7 @@
 package gui;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
 
@@ -19,6 +20,8 @@ public class AddCandidateController {
     private TextField phoneNumber;
     @FXML
     private TextField address;
+    @FXML
+    private Button addCandidate;
 
     public void handleMouseReleased(){
 
