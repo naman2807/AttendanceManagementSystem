@@ -1,3 +1,6 @@
-.pane:hover{
+.pane {
+    -fx-background-color: white;
+}
+.pane{
     -fx-background-color: #c6c2bf;
 }

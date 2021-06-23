@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane stylesheets="attendance.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
             <children>
@@ -90,6 +91,9 @@
                         </ImageView>
                         <Label layoutX="38.0" layoutY="76.0" text="Add Candidate" />
                     </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Pane>
                 <Pane layoutX="110.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
                     <children>
@@ -103,6 +107,9 @@
                     <HBox.margin>
                         <Insets bottom="20.0" left="70.0" top="20.0" />
                     </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Pane>
                 <Pane layoutX="368.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
                     <children>
@@ -116,6 +123,9 @@
                     <HBox.margin>
                         <Insets bottom="20.0" left="80.0" top="20.0" />
                     </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Pane>
             </children>
         </HBox>
