@@ -9,6 +9,18 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
+            <children>
+                <Label layoutX="31.0" layoutY="21.0" text="Add Candidate" textFill="#4910c7">
 
+                </Label>
+                <Label layoutX="34.0" layoutY="55.0" text="Attendance Management" textFill="#ea1010" />
+            </children>
+        </Pane>
+        <Label layoutX="24.0" layoutY="127.0" text="Enter Details To Add Candidate:" textFill="#eb5f0c" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="415.4">
+            <font>
+                <Font name="Algerian" size="24.0" />
+            </font>
+        </Label>
+        <HBox layoutX="-1.0" layoutY="152.0" prefHeight="55.0" prefWidth="846.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-0.39999999999997726" />
     </children>
 </AnchorPane>
