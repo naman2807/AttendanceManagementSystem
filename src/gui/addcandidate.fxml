@@ -70,7 +70,9 @@
                     </HBox.margin>
                 </Label>
                 <TextField prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Address">
-
+                    <HBox.margin>
+                        <Insets left="91.0" top="20.0" />
+                    </HBox.margin>
                 </TextField>
             </children>
         </HBox>
