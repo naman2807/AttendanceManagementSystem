@@ -43,7 +43,10 @@
             </children>
         </HBox>
         <HBox layoutY="214.0" prefHeight="55.0" prefWidth="846.0">
+            <children>
+                <Label text="Phone Number:" textFill="#403939"/>
 
+            </children>
         </HBox>
     </children>
 </AnchorPane>
