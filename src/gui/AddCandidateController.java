@@ -33,6 +33,7 @@ public class AddCandidateController {
     }
 
     public void addCandidate(){
+        String cName = name.getText();
 
     }
 }
