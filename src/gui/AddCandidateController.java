@@ -27,6 +27,8 @@ public class AddCandidateController {
         if(name.getText().isEmpty() || name.getText().trim().isEmpty() || phoneNumber.getText().isEmpty()
         || phoneNumber.getText().trim().isEmpty() || address.getText().isEmpty() || address.getText().trim().isEmpty()){
             addCandidate.setDisable(true);
+        }else {
+            addCandidate.setDisable(false);
         }
     }
 }
