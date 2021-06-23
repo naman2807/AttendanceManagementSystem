@@ -55,6 +55,7 @@ public class MainController {
     private void addCandidateToRecord() throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addcandidate.fxml")));
+        stage.setTitle("Add Candidate");
     }
 
     public void login() throws SQLException, IOException {
