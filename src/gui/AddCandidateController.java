@@ -2,6 +2,7 @@ package gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import org.w3c.dom.Text;
 
 /**
  * Created By: Naman Agarwal
@@ -14,4 +15,6 @@ import javafx.scene.control.TextField;
 public class AddCandidateController {
     @FXML
     private TextField name;
+    @FXML
+    private TextField phoneNumber;
 }
