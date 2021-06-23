@@ -7,6 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
@@ -34,6 +35,9 @@
                         <Insets left="30.0" top="20.0" />
                     </HBox.margin>
                 </Label>
+                <TextField prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Name">
+
+                </TextField>
             </children>
         </HBox>
     </children>
