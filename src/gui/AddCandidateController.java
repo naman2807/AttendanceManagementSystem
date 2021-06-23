@@ -31,4 +31,8 @@ public class AddCandidateController {
             addCandidate.setDisable(false);
         }
     }
+
+    public void addCandidate(){
+
+    }
 }
