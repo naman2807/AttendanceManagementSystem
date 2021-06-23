@@ -49,11 +49,12 @@ public class DataSource {
         preparedStatement.setString(2, candidate.getPhoneNumber());
         preparedStatement.setString(3, candidate.getId());
         preparedStatement.setString(4, candidate.getAddress());
-        ResultSet resultSet = preparedStatement.executeQuery();
-        if(resultSet.next()){
+        boolean result =  preparedStatement.execute();
+//        ResultSet resultSet = preparedStatement.executeQuery();
+        if(result) {
             MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
                     candidate.getId(), "Candidate has been added to record.");
-        }else {
+        } else {
             MyAlert.createAlert(Alert.AlertType.ERROR, "FAILED","CANDIDATE ID: " +
                      candidate.getId(), "Cannot add candidate to database.");
         }
