@@ -52,6 +52,10 @@ public class MainController {
         }
     }
 
+    private void addCandidateToRecord(){
+
+    }
+
     public void login() throws SQLException, IOException {
         String user = userID.getText();
         String pass = password.getText();
