@@ -44,16 +44,16 @@ public class DataSource {
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
+        if(validateCandidate(connection, candidate)){
+            MyAlert.createAlert(Alert.AlertType.ERROR,"ERROR","CANDIDATE ID: " +
+                    candidate.getId(), "Candidate already exists. Cannot add to database.");
+            return;
+        }
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertCandidateQuery());
         preparedStatement.setString(1, candidate.getName());
         preparedStatement.setString(2, candidate.getPhoneNumber());
         preparedStatement.setString(3, candidate.getId());
         preparedStatement.setString(4, candidate.getAddress());
-        if(validateCandidate(connection, candidate)){
-            MyAlert.createAlert(Alert.AlertType.ERROR,"ERROR","CANDIDATE ID: " +
-                    candidate.getId(), "Candidate already exists. Cannot add to database.");
-        }
-
         int result = preparedStatement.executeUpdate();
         if(result == 1) {
             MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
@@ -67,7 +67,8 @@ public class DataSource {
     private static boolean validateCandidate(Connection connection, Candidate candidate) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.searchCandidateQuery());
         preparedStatement.setString(1, candidate.getId());
-        return preparedStatement.execute();
+        ResultSet resultSet = preparedStatement.executeQuery();
+        return resultSet.next();
     }
 
 }
