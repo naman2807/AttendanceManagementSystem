@@ -58,6 +58,7 @@ public class MainController {
         loader.setLocation(getClass().getResource("addcandidate.fxml"));
         stage.setTitle("Add Candidate");
         stage.setScene(new Scene(loader.load(), 845,519));
+        stage.show();
     }
 
     public void login() throws SQLException, IOException {
