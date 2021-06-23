@@ -44,8 +44,11 @@
         </HBox>
         <HBox layoutY="214.0" prefHeight="55.0" prefWidth="846.0">
             <children>
-                <Label text="Phone Number:" textFill="#403939"/>
-
+                <Label text="Phone Number:" textFill="#403939">
+                    <font>
+                        <Font name="Bookman Old Style Italic" size="24.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
     </children>
