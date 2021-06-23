@@ -59,4 +59,8 @@ public class DataSource {
         }
     }
 
+    private boolean validateCandidate(Candidate candidate){
+        return false;
+    }
+
 }
