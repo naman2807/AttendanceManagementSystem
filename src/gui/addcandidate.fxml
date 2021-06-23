@@ -8,6 +8,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
@@ -76,5 +77,8 @@
                 </TextField>
             </children>
         </HBox>
+        <Button layoutX="314.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0"
+                prefWidth="95.0"
+                AnchorPane.topAnchor="390.0" />
     </children>
 </AnchorPane>
