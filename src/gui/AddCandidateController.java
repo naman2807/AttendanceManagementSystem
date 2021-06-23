@@ -24,6 +24,9 @@ public class AddCandidateController {
     private Button addCandidate;
 
     public void handleMouseReleased(){
+        if(name.getText().isEmpty() || name.getText().trim().isEmpty() || phoneNumber.getText().isEmpty()
+        || phoneNumber.getText().trim().isEmpty() || address.getText().isEmpty() || address.getText().trim().isEmpty()){
 
+        }
     }
 }
