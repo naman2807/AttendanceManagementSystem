@@ -82,7 +82,7 @@
                 </TextField>
             </children>
         </HBox>
-        <Button fx:id="addCandidate" layoutX="314.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0"
+        <Button fx:id="addCandidate" disable="true" layoutX="314.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0"
                 prefWidth="95.0" stylesheets="@attendance.css" text="Add Candidate"
                 AnchorPane.topAnchor="390.0">
             <cursor>
