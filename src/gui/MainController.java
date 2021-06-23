@@ -52,8 +52,8 @@ public class MainController {
         }
     }
 
-    private void addCandidateToRecord(){
-
+    private void addCandidateToRecord() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addcandidate.fxml")));
     }
 
     public void login() throws SQLException, IOException {
