@@ -57,7 +57,7 @@ public class MainController {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("addcandidate.fxml"));
         stage.setTitle("Add Candidate");
-        stage.setScene(new Scene());
+        stage.setScene(new Scene(loader.load(), 845,519));
     }
 
     public void login() throws SQLException, IOException {
