@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
 
+import java.util.Random;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -39,6 +41,7 @@ public class AddCandidateController {
     }
 
     private String generateID(String name, String number){
-
+        return String.valueOf(name.toCharArray()[0] + number.toCharArray()[0] +
+                number.toCharArray()[1] + number.toCharArray()[2] + new Random().nextInt(100));
     }
 }
