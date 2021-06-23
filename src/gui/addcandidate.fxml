@@ -60,7 +60,10 @@
             </children>
         </HBox>
         <HBox layoutX="-1.0" layoutY="282.0" prefHeight="55.0" prefWidth="846.0">
+            <children>
+                <Label text="Address:" textFill="#403939"/>
 
+            </children>
         </HBox>
     </children>
 </AnchorPane>
