@@ -11,7 +11,9 @@
         <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
             <children>
                 <Label layoutX="31.0" layoutY="21.0" text="Add Candidate" textFill="#4910c7">
-
+                    <font>
+                        <Font name="Algerian" size="36.0" />
+                    </font>
                 </Label>
                 <Label layoutX="34.0" layoutY="55.0" text="Attendance Management" textFill="#ea1010" />
             </children>
