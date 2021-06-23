@@ -4,5 +4,5 @@
 
 .button:hover{
     -fx-background-color: #323de2;
-
+    -fx-text-fill: black;
 }
