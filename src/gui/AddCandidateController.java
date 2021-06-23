@@ -19,4 +19,8 @@ public class AddCandidateController {
     private TextField phoneNumber;
     @FXML
     private TextField address;
+
+    public void handleMouseReleased(){
+
+    }
 }
