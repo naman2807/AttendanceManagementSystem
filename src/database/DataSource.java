@@ -81,6 +81,7 @@ public class DataSource {
             String name = resultSet.getString(1);
             String phone = resultSet.getString(2);
             String id = resultSet.getString(3);
+            String address = resultSet.getString(4);
         }
     }
 
