@@ -77,6 +77,9 @@ public class DataSource {
         ObservableList<Candidate> candidates = FXCollections.observableArrayList();
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getCandidatesQuery());
         ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()){
+            String name = resultSet.getString(1);
+        }
     }
 
 }
