@@ -3,6 +3,8 @@ package database;
 import alert.MyAlert;
 import data.Candidate;
 import gui.LoginWindow;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
 import java.sql.Connection;
@@ -69,6 +71,10 @@ public class DataSource {
         preparedStatement.setString(1, candidate.getId());
         ResultSet resultSet = preparedStatement.executeQuery();
         return resultSet.next();
+    }
+
+    public static ObservableList<Candidate> getCandidatesList(Connection connection){
+        ObservableList<Candidate> candidates = FXCollections.observableArrayList();
     }
 
 }
