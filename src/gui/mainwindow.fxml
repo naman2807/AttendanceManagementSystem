@@ -98,7 +98,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Pane>
-                <Pane fx:id="markAttendancePane" layoutX="110.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
+                <Pane fx:id="markAttendancePane" onMouseClicked="#handleMouseClick" layoutX="110.0" layoutY="30.0" prefHeight="98.0" prefWidth="158.0" style="-fx-background-color: white;">
                     <children>
                         <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="40.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                             <image>
