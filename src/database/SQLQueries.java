@@ -36,4 +36,8 @@ public class SQLQueries {
     public static String searchCandidateQuery(){
         return "SELECT * FROM " + CANDIDATE_TABLE + " WHERE " + ID + " = ?";
     }
+
+    public static String getCandidatesQuery(){
+
+    }
 }
