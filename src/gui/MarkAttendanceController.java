@@ -15,4 +15,8 @@ import javafx.scene.control.TableView;
 public class MarkAttendanceController {
     @FXML
     private TableView<Candidate> candidateTableView;
+
+    public void setCandidateTable(){
+
+    }
 }
