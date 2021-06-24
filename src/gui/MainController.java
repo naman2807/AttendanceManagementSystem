@@ -35,6 +35,8 @@ public class MainController {
     private PasswordField password;
     @FXML
     private Pane addCandidate;
+    @FXML
+    private Pane markAttendancePane;
 
     @FXML
     public void handleKeyReleased(){
