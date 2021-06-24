@@ -76,6 +76,7 @@ public class DataSource {
     public static ObservableList<Candidate> getCandidatesList(Connection connection) throws SQLException {
         ObservableList<Candidate> candidates = FXCollections.observableArrayList();
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getCandidatesQuery());
+        ResultSet resultSet = preparedStatement.executeQuery();
     }
 
 }
