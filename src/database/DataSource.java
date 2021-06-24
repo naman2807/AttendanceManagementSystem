@@ -79,6 +79,7 @@ public class DataSource {
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()){
             String name = resultSet.getString(1);
+            String phone = resultSet.getString(2);
         }
     }
 
