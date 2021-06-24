@@ -57,7 +57,7 @@ public class MainController {
     }
 
     private void markAttendance(){
-
+        Stage stage = new Stage();
     }
 
     private void addCandidateToRecord() throws IOException {
