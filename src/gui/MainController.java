@@ -56,8 +56,9 @@ public class MainController {
         }
     }
 
-    private void markAttendance(){
+    private void markAttendance() throws IOException {
         Stage stage = new Stage();
+        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("markattendance.fxml")));
     }
 
     private void addCandidateToRecord() throws IOException {
