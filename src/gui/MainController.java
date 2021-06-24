@@ -51,6 +51,8 @@ public class MainController {
     public void handleMouseClick(MouseEvent event) throws SQLException, IOException {
         if(event.getSource() == addCandidate){
             addCandidateToRecord();
+        }else if(event.getSource() == markAttendancePane){
+
         }
     }
 
