@@ -84,6 +84,7 @@ public class DataSource {
             String address = resultSet.getString(4);
             candidates.add(new Candidate(name,phone,id,address,""));
         }
+        return candidates;
     }
 
 }
