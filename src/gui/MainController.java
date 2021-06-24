@@ -61,6 +61,7 @@ public class MainController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("markattendance.fxml")));
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 519));
+        stage.show();
     }
 
     private void addCandidateToRecord() throws IOException {
