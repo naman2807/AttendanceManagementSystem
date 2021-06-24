@@ -80,6 +80,7 @@ public class DataSource {
         while (resultSet.next()){
             String name = resultSet.getString(1);
             String phone = resultSet.getString(2);
+            String id = resultSet.getString(3);
         }
     }
 
