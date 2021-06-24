@@ -38,6 +38,6 @@ public class SQLQueries {
     }
 
     public static String getCandidatesQuery(){
-
+        return "SELECT * FROM " + CANDIDATE_TABLE;
     }
 }
