@@ -52,7 +52,7 @@ public class MainController {
         if(event.getSource() == addCandidate){
             addCandidateToRecord();
         }else if(event.getSource() == markAttendancePane){
-
+            markAttendance();
         }
     }
 
