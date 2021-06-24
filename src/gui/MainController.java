@@ -56,6 +56,10 @@ public class MainController {
         }
     }
 
+    private void markAttendance(){
+
+    }
+
     private void addCandidateToRecord() throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
