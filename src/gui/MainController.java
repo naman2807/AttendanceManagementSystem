@@ -56,12 +56,13 @@ public class MainController {
         }
     }
 
-    private void markAttendance() throws IOException {
+    private void markAttendance() throws IOException, SQLException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("markattendance.fxml"));
         Parent root = loader.load();
         MarkAttendanceController controller = loader.getController();
+        controller.setCandidateTable();
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 519));
         stage.show();
