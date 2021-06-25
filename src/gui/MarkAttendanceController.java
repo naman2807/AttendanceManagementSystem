@@ -1,8 +1,13 @@
 package gui;
 
 import data.Candidate;
+import database.DataBaseConnection;
+import database.DataSource;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
+
+import java.sql.SQLException;
 
 /**
  * Created By: Naman Agarwal
@@ -16,7 +21,8 @@ public class MarkAttendanceController {
     @FXML
     private TableView<Candidate> candidateTableView;
 
-    public void setCandidateTable(){
+    public void setCandidateTable() throws SQLException {
+        ObservableList<Candidate> candidates = DataSource.getCandidatesList(DataBaseConnection.getConnection());
 
     }
 }
