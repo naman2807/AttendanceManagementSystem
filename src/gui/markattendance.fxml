@@ -17,5 +17,10 @@
                 </Label>
             </children>
         </Pane>
+        <Label layoutX="11.0" layoutY="111.0" text="Time For Attendance: 8:00 AM To 8:30 AM" textFill="#156ceb">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>
