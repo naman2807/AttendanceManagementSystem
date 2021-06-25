@@ -31,7 +31,11 @@
 
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="261.59999084472656" text="Name" />
+                <TableColumn prefWidth="261.59999084472656" text="Name">
+                    <cellValueFactory>
+
+                    </cellValueFactory>
+                </TableColumn>
                 <TableColumn prefWidth="69.5999755859375" text="Status" />
             </columns>
         </TableView>
