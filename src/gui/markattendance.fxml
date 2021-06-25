@@ -9,7 +9,10 @@
 
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="519.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;"
+            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+                fx:controller="gui.MarkAttendanceController">
     <children>
         <Pane layoutX="-5.0" layoutY="20.0" prefHeight="86.0" prefWidth="854.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-4.399999999999977">
             <children>
