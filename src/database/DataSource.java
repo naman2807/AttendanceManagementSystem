@@ -82,7 +82,7 @@ public class DataSource {
             String phone = resultSet.getString(2);
             String id = resultSet.getString(3);
             String address = resultSet.getString(4);
-            candidates.add(new Candidate(name,phone,id,address,""));
+            candidates.add(new Candidate(id, name, ""));
         }
         return candidates;
     }
