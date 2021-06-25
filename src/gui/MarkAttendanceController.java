@@ -25,4 +25,8 @@ public class MarkAttendanceController {
         ObservableList<Candidate> candidates = DataSource.getCandidatesList(DataBaseConnection.getConnection());
         candidateTableView.setItems(candidates);
     }
+
+    public void markAttendance(){
+
+    }
 }
