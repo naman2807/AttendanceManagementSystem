@@ -60,7 +60,7 @@ public class MainController {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("markattendance.fxml"));
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("markattendance.fxml")));
+        Parent root = loader.load();
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 519));
         stage.show();
