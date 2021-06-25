@@ -24,6 +24,12 @@ public class Candidate {
     public Candidate() {
     }
 
+    public Candidate(String id, String name, String attendance){
+        this.id.set(id);
+        this.name.set(name);
+        this.status = new CheckBox();
+    }
+
     public Candidate(String name, String phoneNumber, String id, String address){
         this.name.set(name);
         this.phoneNumber.set(phoneNumber);
