@@ -23,6 +23,6 @@ public class MarkAttendanceController {
 
     public void setCandidateTable() throws SQLException {
         ObservableList<Candidate> candidates = DataSource.getCandidatesList(DataBaseConnection.getConnection());
-
+        candidateTableView.setItems(candidates);
     }
 }
