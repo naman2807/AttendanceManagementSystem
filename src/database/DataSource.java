@@ -90,7 +90,7 @@ public class DataSource {
 
     public static void uploadAttendance(Connection connection, Attendance attendance) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertNewAttendanceQuery());
-
+        preparedStatement.setString(1, attendance.getId());
     }
 
 }
