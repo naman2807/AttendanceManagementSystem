@@ -26,6 +26,7 @@ import java.sql.SQLException;
 public class MarkAttendanceController {
     @FXML
     private TableView<Candidate> candidateTableView;
+    private Stage stage;
 
 
     public void setCandidateTable() throws SQLException {
@@ -33,7 +34,7 @@ public class MarkAttendanceController {
         candidateTableView.setItems(candidates);
     }
 
-    public void markAttendance(Stage stage){
+    public void markAttendance(){
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
     }
 
