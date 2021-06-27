@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
@@ -32,7 +33,7 @@ public class MarkAttendanceController {
         candidateTableView.setItems(candidates);
     }
 
-    public void markAttendance(){
+    public void markAttendance(Stage stage){
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
     }
 
