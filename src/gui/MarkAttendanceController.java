@@ -41,7 +41,8 @@ public class MarkAttendanceController {
 
     public void markAttendance() throws SQLException {
         if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(),DateFormatter.getCurrentFormattedDate())){
-
+            MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
+                    "Attendance Uploaded Already");
         }
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
         MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS","DATE: " + DateFormatter.getCurrentFormattedDate(),
