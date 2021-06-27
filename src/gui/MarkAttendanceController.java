@@ -44,6 +44,7 @@ public class MarkAttendanceController {
             MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
                     "Attendance Uploaded Already");
             stage.close();
+            return;
         }
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
         MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS","DATE: " + DateFormatter.getCurrentFormattedDate(),
