@@ -16,6 +16,6 @@ public class DateFormatter {
     }
 
     public static String getCurrentFormattedDate() {
-        return DateTimeFormatter.ofPattern("dd,MMMM yyyy").format(LocalDate.now());
+        return DateTimeFormatter.ofPattern("dd MMMM, yyyy").format(LocalDate.now());
     }
 }

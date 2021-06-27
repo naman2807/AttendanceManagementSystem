@@ -43,6 +43,7 @@ public class MarkAttendanceController {
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
         MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS","DATE: " + DateFormatter.getCurrentFormattedDate(),
                 "Attendance Uploaded Successfully");
+        stage.close();
     }
 
     private static void accept(Candidate candidate) {
