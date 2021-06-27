@@ -96,4 +96,8 @@ public class DataSource {
         preparedStatement.executeUpdate();
     }
 
+    public static void validateDateForAttendance(Connection connection, String date){
+
+    }
+
 }
