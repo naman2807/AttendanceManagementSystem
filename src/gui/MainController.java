@@ -68,18 +68,13 @@ public class MainController {
         controller.setCandidateTable();
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 700));
-        controller.setStage(stage);
         if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate())){
             MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
                     "Attendance Uploaded Already");
-            stage.close();
             return;
         }
+        controller.setStage(stage);
         stage.show();
-    }
-
-    private void validateDateForAttendance(){
-
     }
 
     private void addCandidateToRecord() throws IOException {
