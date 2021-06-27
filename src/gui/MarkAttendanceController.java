@@ -26,21 +26,30 @@ public class MarkAttendanceController {
     @FXML
     private TableView<Candidate> candidateTableView;
 
+    private static void accept(Candidate candidate) {
+        if (candidate.getStatus().isSelected()) {
+            try {
+                DataSource.uploadAttendance(DataBaseConnection.getConnection(), new Attendance(candidate.getId(),
+                        "PRESENT", DateFormatter.getCurrentFormattedDate()));
+            } catch (SQLException throwables) {
+                System.err.println("Cannot upload attendance");
+            }
+        } else {
+            try {
+                DataSource.uploadAttendance(DataBaseConnection.getConnection(), new Attendance(candidate.getId(),
+                        "ABSENT", DateFormatter.getCurrentFormattedDate()));
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+    }
+
     public void setCandidateTable() throws SQLException {
         ObservableList<Candidate> candidates = DataSource.getCandidatesList(DataBaseConnection.getConnection());
         candidateTableView.setItems(candidates);
     }
 
     public void markAttendance(){
-        candidateTableView.getItems().forEach(candidate -> {
-            if(candidate.getStatus().isSelected()){
-                try {
-                    DataSource.uploadAttendance(DataBaseConnection.getConnection(), new Attendance(candidate.getId(),
-                            "PRESENT", DateFormatter.getCurrentFormattedDate()));
-                } catch (SQLException throwables) {
-                    System.err.println("Cannot upload attendance");
-                }
-            }
-        });
+        candidateTableView.getItems().forEach(MarkAttendanceController::accept);
     }
 }
