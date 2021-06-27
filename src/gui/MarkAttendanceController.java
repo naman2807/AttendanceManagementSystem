@@ -31,7 +31,9 @@ public class MarkAttendanceController {
 
     public void markAttendance(){
         candidateTableView.getItems().forEach(candidate -> {
+            if(candidate.getStatus().isSelected()){
 
+            }
         });
     }
 }
