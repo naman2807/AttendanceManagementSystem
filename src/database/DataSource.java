@@ -96,7 +96,8 @@ public class DataSource {
         preparedStatement.executeUpdate();
     }
 
-    public static void validateDateForAttendance(Connection connection, String date){
+    public static boolean validateDateForAttendance(Connection connection, String date) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.validateDateForAttendanceQuery());
 
     }
 
