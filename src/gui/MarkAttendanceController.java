@@ -28,6 +28,9 @@ public class MarkAttendanceController {
     private TableView<Candidate> candidateTableView;
     private Stage stage;
 
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
 
     public void setCandidateTable() throws SQLException {
         ObservableList<Candidate> candidates = DataSource.getCandidatesList(DataBaseConnection.getConnection());
