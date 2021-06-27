@@ -25,8 +25,8 @@ public class SQLQueries {
         return "INSERT INTO " + ATTENDANCE_TABLE + " VALUES (?, ?, ?)";
     }
 
-    public static String updateAttendanceStatusQuery(){
-        return "UPDATE " + ATTENDANCE_TABLE + " SET " + STATUS + " = ? WHERE " + ID + " = ?";
+    public static String validateDateForAttendanceQuery(){
+
     }
 
     public static String loginQuery(){
