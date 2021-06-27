@@ -1,8 +1,10 @@
 package gui;
 
+import data.Attendance;
 import data.Candidate;
 import database.DataBaseConnection;
 import database.DataSource;
+import formatter.DateFormatter;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -32,7 +34,12 @@ public class MarkAttendanceController {
     public void markAttendance(){
         candidateTableView.getItems().forEach(candidate -> {
             if(candidate.getStatus().isSelected()){
-
+                try {
+                    DataSource.uploadAttendance(DataBaseConnection.getConnection(), new Attendance(candidate.getId(),
+                            "PRESENT", DateFormatter.getCurrentFormattedDate()));
+                } catch (SQLException throwables) {
+                    System.err.println("Cannot upload attendance");
+                }
             }
         });
     }
