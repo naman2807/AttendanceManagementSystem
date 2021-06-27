@@ -8,13 +8,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="700.0" prefWidth="845.0" style="-fx-background-color: #B1B1FCFF;"
-            xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="845.0"
+            style="-fx-background-color: #DB9DE5FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane layoutX="-5.0" layoutY="20.0" prefHeight="86.0" prefWidth="854.0"
-              style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="-5.0"
+              style="-fx-background-color: #D264F1FF;" AnchorPane.leftAnchor="-5.0"
               AnchorPane.rightAnchor="-4.399999999999977">
+            <children>
+                <Label layoutX="48.0" layoutY="20.0" text="Attendance Record" textFill="#0e23e3">
+                    <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                    </font>
+                </Label>
+            </children>
         </Pane>
+
     </children>
 </AnchorPane>
