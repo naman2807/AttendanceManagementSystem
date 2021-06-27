@@ -3,8 +3,11 @@ package gui;
 import data.Candidate;
 import database.DataBaseConnection;
 import database.DataSource;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 
 import java.sql.SQLException;

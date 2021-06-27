@@ -64,7 +64,7 @@ public class MainController {
         MarkAttendanceController controller = loader.getController();
         controller.setCandidateTable();
         stage.setTitle("Mark Attendance");
-        stage.setScene(new Scene(root, 845, 519));
+        stage.setScene(new Scene(root, 845, 700));
         stage.show();
     }
 

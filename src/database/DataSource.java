@@ -1,6 +1,7 @@
 package database;
 
 import alert.MyAlert;
+import data.Attendance;
 import data.Candidate;
 import gui.LoginWindow;
 import javafx.collections.FXCollections;
@@ -85,6 +86,10 @@ public class DataSource {
             candidates.add(new Candidate(id, name, ""));
         }
         return candidates;
+    }
+
+    public static void uploadAttendance(Connection connection, Attendance attendance){
+
     }
 
 }
