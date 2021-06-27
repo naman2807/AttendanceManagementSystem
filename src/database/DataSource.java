@@ -100,6 +100,7 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.validateDateForAttendanceQuery());
         preparedStatement.setString(1, date);
         ResultSet set = preparedStatement.executeQuery();
+        return set.next();
     }
 
 }
