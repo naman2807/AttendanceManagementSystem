@@ -43,6 +43,7 @@ public class MarkAttendanceController {
         if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(),DateFormatter.getCurrentFormattedDate())){
             MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
                     "Attendance Uploaded Already");
+            stage.close();
         }
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
         MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS","DATE: " + DateFormatter.getCurrentFormattedDate(),
