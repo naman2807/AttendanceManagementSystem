@@ -26,7 +26,7 @@ public class SQLQueries {
     }
 
     public static String validateDateForAttendanceQuery(){
-
+        return "SELECT * FROM " + ATTENDANCE_TABLE + " WHERE " + DATE + " = ?";
     }
 
     public static String loginQuery(){
