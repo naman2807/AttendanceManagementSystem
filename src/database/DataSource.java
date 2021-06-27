@@ -88,7 +88,8 @@ public class DataSource {
         return candidates;
     }
 
-    public static void uploadAttendance(Connection connection, Attendance attendance){
+    public static void uploadAttendance(Connection connection, Attendance attendance) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertNewAttendanceQuery());
 
     }
 
