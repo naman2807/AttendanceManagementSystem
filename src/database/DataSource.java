@@ -92,6 +92,7 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.insertNewAttendanceQuery());
         preparedStatement.setString(1, attendance.getId());
         preparedStatement.setString(2, attendance.getDate());
+        preparedStatement.setString(3, attendance.getStatus());
     }
 
 }
