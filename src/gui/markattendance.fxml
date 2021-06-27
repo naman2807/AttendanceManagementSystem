@@ -51,7 +51,7 @@
                 </TableColumn>
             </columns>
         </TableView>
-        <Button layoutX="322.0" layoutY="639.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" stylesheets="@attendance.css" text="Upload Attendance">
+        <Button onAction="#markAttendance" layoutX="322.0" layoutY="639.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" stylesheets="@attendance.css" text="Upload Attendance">
             <font>
                 <Font name="Times New Roman" size="12.0" />
             </font>
