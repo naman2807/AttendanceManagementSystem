@@ -1,5 +1,6 @@
 package gui;
 
+import alert.MyAlert;
 import data.Attendance;
 import data.Candidate;
 import database.DataBaseConnection;
@@ -8,6 +9,7 @@ import formatter.DateFormatter;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
@@ -39,6 +41,8 @@ public class MarkAttendanceController {
 
     public void markAttendance(){
         candidateTableView.getItems().forEach(MarkAttendanceController::accept);
+        MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS","DATE: " + DateFormatter.getCurrentFormattedDate(),
+                "Attendance Uploaded Successfully");
     }
 
     private static void accept(Candidate candidate) {
