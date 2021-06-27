@@ -1,12 +1,15 @@
 package gui;
 
+import alert.MyAlert;
 import database.DataBaseConnection;
 import database.DataSource;
+import formatter.DateFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -66,7 +69,17 @@ public class MainController {
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 700));
         controller.setStage(stage);
+        if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate())){
+            MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
+                    "Attendance Uploaded Already");
+            stage.close();
+            return;
+        }
         stage.show();
+    }
+
+    private void validateDateForAttendance(){
+
     }
 
     private void addCandidateToRecord() throws IOException {
