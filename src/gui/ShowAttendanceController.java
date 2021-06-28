@@ -1,5 +1,9 @@
 package gui;
 
+import data.Attendance;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -9,4 +13,6 @@ package gui;
  */
 
 public class ShowAttendanceController {
+    @FXML
+    private TableView<Attendance> tableView;
 }
