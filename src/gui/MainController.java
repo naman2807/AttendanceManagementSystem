@@ -68,6 +68,7 @@ public class MainController {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("showattendance.fxml"));
         Parent root = loader.load();
+        stage.setTitle("Attendance Record");
     }
 
     private void markAttendance() throws IOException, SQLException {
