@@ -15,4 +15,8 @@ import javafx.scene.control.TableView;
 public class ShowAttendanceController {
     @FXML
     private TableView<Attendance> tableView;
+
+    public void populateTable(){
+
+    }
 }
