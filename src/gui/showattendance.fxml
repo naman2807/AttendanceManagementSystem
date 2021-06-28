@@ -48,7 +48,7 @@
                 </TableColumn>
                 <TableColumn prefWidth="69.5999755859375" text="Status">
                     <cellValueFactory>
-
+                        <PropertyValueFactory property="status"/>
                     </cellValueFactory>
                 </TableColumn>
             </columns>
