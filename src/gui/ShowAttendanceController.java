@@ -1,6 +1,7 @@
 package gui;
 
 import data.Attendance;
+import formatter.DateFormatter;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
@@ -20,6 +21,6 @@ public class ShowAttendanceController {
     private Label dateLabel;
 
     public void populateTable(){
-
+        dateLabel.setText(DateFormatter.getCurrentFormattedDate());
     }
 }
