@@ -2,6 +2,7 @@ package gui;
 
 import data.Attendance;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 
 /**
@@ -15,6 +16,8 @@ import javafx.scene.control.TableView;
 public class ShowAttendanceController {
     @FXML
     private TableView<Attendance> tableView;
+    @FXML
+    private Label dateLabel;
 
     public void populateTable(){
 
