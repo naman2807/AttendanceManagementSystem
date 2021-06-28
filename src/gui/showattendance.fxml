@@ -35,7 +35,11 @@
         </Label>
         <TableView layoutX="165.0" layoutY="205.0" prefHeight="400.0" prefWidth="457.0" stylesheets="@attendance.css">
             <columns>
-                <TableColumn prefWidth="123.99996662139893" text="ID"/>
+                <TableColumn prefWidth="123.99996662139893" text="ID">
+                    <cellValueFactory>
+
+                    </cellValueFactory>
+                </TableColumn>
                 <TableColumn prefWidth="261.59999084472656" text="Date" />
                 <TableColumn prefWidth="69.5999755859375" text="Status" />
             </columns>
