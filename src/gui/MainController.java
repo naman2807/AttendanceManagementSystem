@@ -40,6 +40,8 @@ public class MainController {
     private Pane addCandidate;
     @FXML
     private Pane markAttendancePane;
+    @FXML
+    private Pane showAttendance;
 
     @FXML
     public void handleKeyReleased(){
