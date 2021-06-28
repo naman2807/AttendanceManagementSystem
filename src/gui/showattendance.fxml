@@ -29,7 +29,9 @@
             </font>
         </Label>
         <Label layoutX="189.0" layoutY="126.0" text="26 JUNE, 2021" textFill="#e82300">
-
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font>
         </Label>
     </children>
 </AnchorPane>
