@@ -64,7 +64,7 @@ public class MainController {
     }
 
     private void showAttendancePane(){
-
+        Stage stage = new Stage();
     }
 
     private void markAttendance() throws IOException, SQLException {
