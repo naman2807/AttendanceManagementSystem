@@ -70,6 +70,7 @@ public class MainController {
         Parent root = loader.load();
         stage.setTitle("Attendance Record");
         ShowAttendanceController controller = loader.getController();
+        controller.populateTable();
     }
 
     private void markAttendance() throws IOException, SQLException {
