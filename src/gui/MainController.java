@@ -69,6 +69,7 @@ public class MainController {
         loader.setLocation(getClass().getResource("showattendance.fxml"));
         Parent root = loader.load();
         stage.setTitle("Attendance Record");
+        ShowAttendanceController controller = loader.getController();
     }
 
     private void markAttendance() throws IOException, SQLException {
