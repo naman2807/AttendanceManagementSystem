@@ -58,6 +58,8 @@ public class MainController {
             addCandidateToRecord();
         }else if(event.getSource() == markAttendancePane){
             markAttendance();
+        }else if(event.getSource() == showAttendance){
+
         }
     }
 
