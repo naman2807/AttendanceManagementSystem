@@ -37,7 +37,7 @@
             <columns>
                 <TableColumn prefWidth="123.99996662139893" text="ID"/>
                 <TableColumn prefWidth="261.59999084472656" text="Name" />
-
+                <TableColumn prefWidth="69.5999755859375" text="Status" />
             </columns>
         </TableView>
     </children>
