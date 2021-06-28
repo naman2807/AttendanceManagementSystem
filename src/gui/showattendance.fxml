@@ -33,5 +33,8 @@
                 <Font name="Times New Roman Bold" size="18.0" />
             </font>
         </Label>
+        <TableView layoutX="165.0" layoutY="205.0" prefHeight="400.0" prefWidth="457.0" stylesheets="@attendance.css">
+
+        </TableView>
     </children>
 </AnchorPane>
