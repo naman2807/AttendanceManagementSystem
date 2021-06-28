@@ -59,7 +59,7 @@ public class MainController {
         }else if(event.getSource() == markAttendancePane){
             markAttendance();
         }else if(event.getSource() == showAttendance){
-
+            showAttendancePane();
         }
     }
 
