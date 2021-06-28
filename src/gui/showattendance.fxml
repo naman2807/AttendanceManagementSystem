@@ -35,7 +35,7 @@
         </Label>
         <TableView layoutX="165.0" layoutY="205.0" prefHeight="400.0" prefWidth="457.0" stylesheets="@attendance.css">
             <columns>
-
+                <TableColumn prefWidth="123.99996662139893" text="ID" />
             </columns>
         </TableView>
     </children>
