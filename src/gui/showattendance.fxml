@@ -24,7 +24,9 @@
             </children>
         </Pane>
         <Label layoutX="11.0" layoutY="125.0" text="Attendance Record Of: " textFill="#156ceb">
-
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
         </Label>
     </children>
 </AnchorPane>
