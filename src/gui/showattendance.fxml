@@ -11,7 +11,8 @@
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="700.0" prefWidth="845.0"
-            style="-fx-background-color: #DB9DE5FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            style="-fx-background-color: #DB9DE5FF;" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ShowAttendanceController">
     <children>
         <Pane layoutX="-5.0" layoutY="20.0" prefHeight="86.0" prefWidth="854.0"
               style="-fx-background-color: #D264F1FF;" AnchorPane.leftAnchor="-5.0"
