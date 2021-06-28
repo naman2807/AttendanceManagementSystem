@@ -65,6 +65,7 @@ public class MainController {
 
     private void showAttendancePane(){
         Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
     }
 
     private void markAttendance() throws IOException, SQLException {
