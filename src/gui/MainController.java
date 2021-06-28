@@ -63,10 +63,11 @@ public class MainController {
         }
     }
 
-    private void showAttendancePane(){
+    private void showAttendancePane() throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("showattendance.fxml"));
+        Parent root = loader.load();
     }
 
     private void markAttendance() throws IOException, SQLException {
