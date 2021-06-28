@@ -71,6 +71,7 @@ public class MainController {
         stage.setTitle("Attendance Record");
         ShowAttendanceController controller = loader.getController();
         controller.populateTable();
+        stage.setScene(new Scene(root, 845,700));
     }
 
     private void markAttendance() throws IOException, SQLException {
