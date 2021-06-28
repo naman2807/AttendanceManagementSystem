@@ -38,7 +38,7 @@
             <columns>
                 <TableColumn prefWidth="123.99996662139893" text="ID">
                     <cellValueFactory>
-
+                        <PropertyValueFactory property="id"/>
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn prefWidth="261.59999084472656" text="Date">
