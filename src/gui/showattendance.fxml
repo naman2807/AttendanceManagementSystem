@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="700.0" prefWidth="845.0"
             style="-fx-background-color: #DB9DE5FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
@@ -42,7 +43,7 @@
                 </TableColumn>
                 <TableColumn prefWidth="261.59999084472656" text="Date">
                     <cellValueFactory>
-
+                        <PropertyValueFactory property="date"/>
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn prefWidth="69.5999755859375" text="Status">
