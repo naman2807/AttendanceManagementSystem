@@ -120,6 +120,7 @@ public class DataSource {
             String status = resultSet.getString(3);
             attendances.add(new Attendance(id, status, date1));
         }
+        return attendances;
     }
 
 }
