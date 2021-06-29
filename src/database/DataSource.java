@@ -107,6 +107,7 @@ public class DataSource {
         ObservableList<Attendance> attendances = FXCollections.observableArrayList();
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getAttendanceRecordQuery());
         preparedStatement.setString(1, date);
+        ResultSet resultSet = preparedStatement.executeQuery();
     }
 
 }
