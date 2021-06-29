@@ -28,6 +28,8 @@ public class ShowAttendanceController {
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
         ObservableList<Attendance> attendances = DataSource.getAttendanceRecord(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate());
+        if(attendances == null){
 
+        }
     }
 }
