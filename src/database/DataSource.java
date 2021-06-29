@@ -111,7 +111,9 @@ public class DataSource {
         if(!resultSet.next()){
             MyAlert.createAlert(Alert.AlertType.ERROR,"DATE: " + date, "NO DATA FOUND",
                     "No attendance found for specified date.");
+            return null;
         }
+        resultSet.previous();
     }
 
 }
