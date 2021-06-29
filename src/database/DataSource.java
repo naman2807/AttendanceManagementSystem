@@ -104,7 +104,7 @@ public class DataSource {
     }
 
     public static ObservableList<Attendance> getAttendanceRecord(Connection connection, String date){
-
+        ObservableList<Attendance> attendances = FXCollections.observableArrayList();
     }
 
 }
