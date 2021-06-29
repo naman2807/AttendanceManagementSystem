@@ -106,7 +106,7 @@ public class DataSource {
     public static ObservableList<Attendance> getAttendanceRecord(Connection connection, String date) throws SQLException {
         ObservableList<Attendance> attendances = FXCollections.observableArrayList();
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getAttendanceRecordQuery());
-
+        preparedStatement.setString(1, date);
     }
 
 }
