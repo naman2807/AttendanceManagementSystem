@@ -118,6 +118,7 @@ public class DataSource {
             String id = resultSet.getString(1);
             String date1 = resultSet.getString(2);
             String status = resultSet.getString(3);
+            attendances.add(new Attendance(id, status, date1));
         }
     }
 
