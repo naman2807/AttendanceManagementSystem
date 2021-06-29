@@ -117,6 +117,7 @@ public class DataSource {
         while (resultSet.next()){
             String id = resultSet.getString(1);
             String date1 = resultSet.getString(2);
+            String status = resultSet.getString(3);
         }
     }
 
