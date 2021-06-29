@@ -1,10 +1,15 @@
 package gui;
 
 import data.Attendance;
+import database.DataBaseConnection;
+import database.DataSource;
 import formatter.DateFormatter;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
+
+import java.sql.SQLException;
 
 /**
  * Created By: Naman Agarwal
@@ -20,7 +25,9 @@ public class ShowAttendanceController {
     @FXML
     private Label dateLabel;
 
-    public void populateTable(){
+    public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
+        ObservableList<Attendance> attendances = DataSource.getAttendanceRecord(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate());
+
     }
 }
