@@ -29,7 +29,7 @@ public class ShowAttendanceController {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
         ObservableList<Attendance> attendances = DataSource.getAttendanceRecord(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate());
         if(attendances == null){
-
+            return;
         }
     }
 }
