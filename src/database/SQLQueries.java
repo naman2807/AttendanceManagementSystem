@@ -17,6 +17,18 @@ public class SQLQueries {
     private static final String USERNAME_PASSWORD_TABLE = "username_password";
     private static final String USERNAME = "userid";
 
+    public static String loginQuery(){
+        return "SELECT * FROM " + USERNAME_PASSWORD_TABLE + " WHERE " + USERNAME + " = ?";
+    }
+
+    public static String searchCandidateQuery(){
+        return "SELECT * FROM " + CANDIDATE_TABLE + " WHERE " + ID + " = ?";
+    }
+
+    public static String getCandidatesQuery(){
+        return "SELECT * FROM " + CANDIDATE_TABLE;
+    }
+
     public static String insertCandidateQuery(){
         return "INSERT INTO " + CANDIDATE_TABLE + " VALUES(?, ?, ?, ?)";
     }
@@ -29,15 +41,10 @@ public class SQLQueries {
         return "SELECT * FROM " + ATTENDANCE_TABLE + " WHERE " + DATE + " = ?";
     }
 
-    public static String loginQuery(){
-        return "SELECT * FROM " + USERNAME_PASSWORD_TABLE + " WHERE " + USERNAME + " = ?";
+    public static String getAttendanceRecordQuery(){
+
     }
 
-    public static String searchCandidateQuery(){
-        return "SELECT * FROM " + CANDIDATE_TABLE + " WHERE " + ID + " = ?";
-    }
 
-    public static String getCandidatesQuery(){
-        return "SELECT * FROM " + CANDIDATE_TABLE;
-    }
+
 }
