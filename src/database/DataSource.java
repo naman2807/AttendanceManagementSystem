@@ -103,8 +103,10 @@ public class DataSource {
         return set.next();
     }
 
-    public static ObservableList<Attendance> getAttendanceRecord(Connection connection, String date){
+    public static ObservableList<Attendance> getAttendanceRecord(Connection connection, String date) throws SQLException {
         ObservableList<Attendance> attendances = FXCollections.observableArrayList();
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getAttendanceRecordQuery());
+
     }
 
 }
