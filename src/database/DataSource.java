@@ -103,4 +103,8 @@ public class DataSource {
         return set.next();
     }
 
+    public static ObservableList<Attendance> getAttendanceRecord(Connection connection, String date){
+
+    }
+
 }
