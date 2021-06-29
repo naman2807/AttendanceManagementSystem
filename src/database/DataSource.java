@@ -108,6 +108,10 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getAttendanceRecordQuery());
         preparedStatement.setString(1, date);
         ResultSet resultSet = preparedStatement.executeQuery();
+        if(!resultSet.next()){
+            MyAlert.createAlert(Alert.AlertType.ERROR,"DATE: " + date, "NO DATA FOUND",
+                    "No attendance found for specified date.");
+        }
     }
 
 }
