@@ -1,5 +1,7 @@
 package formatter;
 
+import java.time.LocalTime;
+
 /**
  * Created By: Naman Agarwal
  * User ID: naman2807
@@ -9,4 +11,5 @@ package formatter;
  */
 
 public class TimeFormatter {
+    private LocalTime time = LocalTime.now();
 }
