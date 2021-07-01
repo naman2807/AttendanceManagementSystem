@@ -4,6 +4,7 @@ import alert.MyAlert;
 import database.DataBaseConnection;
 import database.DataSource;
 import formatter.DateFormatter;
+import formatter.TimeFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,6 +85,10 @@ public class MainController {
         controller.setCandidateTable();
         stage.setTitle("Mark Attendance");
         stage.setScene(new Scene(root, 845, 700));
+        if(TimeFormatter.validateTime()){
+            MyAlert.createAlert(Alert.AlertType.WARNING,"TIME PROBLEM","CURRENT TIME : " +
+                    TimeFormatter.getCurrentTime(),"Cannot mark attendance at this time.");
+        }
         if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate())){
             MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
                     "Attendance Uploaded Already");
