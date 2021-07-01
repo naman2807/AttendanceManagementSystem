@@ -17,4 +17,8 @@ public class TimeFormatter {
         return time.isAfter(LocalTime.of(10,00))
                 || time.isBefore(LocalTime.of(8,00));
     }
+
+    public static String getCurrentTime(){
+
+    }
 }
