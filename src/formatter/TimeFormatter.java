@@ -1,6 +1,7 @@
 package formatter;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created By: Naman Agarwal
@@ -20,6 +21,6 @@ public class TimeFormatter {
 
     public static String getCurrentTime(){
         LocalTime time = LocalTime.now();
-
+        return time.format(DateTimeFormatter.ofPattern("HH:mm"));
     }
 }
