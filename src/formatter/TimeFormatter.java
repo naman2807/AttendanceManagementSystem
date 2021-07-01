@@ -11,5 +11,9 @@ import java.time.LocalTime;
  */
 
 public class TimeFormatter {
-    private LocalTime time = LocalTime.now();
+
+    public static boolean validateTime(){
+        LocalTime time = LocalTime.now();
+        return false;
+    }
 }
