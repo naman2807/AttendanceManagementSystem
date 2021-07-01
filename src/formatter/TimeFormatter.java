@@ -19,6 +19,7 @@ public class TimeFormatter {
     }
 
     public static String getCurrentTime(){
+        LocalTime time = LocalTime.now();
 
     }
 }
