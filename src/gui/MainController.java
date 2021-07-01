@@ -88,6 +88,7 @@ public class MainController {
         if(TimeFormatter.validateTime()){
             MyAlert.createAlert(Alert.AlertType.WARNING,"TIME PROBLEM","CURRENT TIME : " +
                     TimeFormatter.getCurrentTime(),"Cannot mark attendance at this time.");
+            return;
         }
         if(DataSource.validateDateForAttendance(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate())){
             MyAlert.createAlert(Alert.AlertType.ERROR, "STOP!","DATE: " + DateFormatter.getCurrentFormattedDate(),
