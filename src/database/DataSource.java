@@ -157,6 +157,11 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.searchCandidateQuery());
         preparedStatement.setString(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()){
+            return new Candidate(resultSet.getString(1),resultSet.getString(2),
+                    resultSet.getString(3), resultSet.getString(4));
+        }
+        return null;
     }
 
 }
