@@ -124,4 +124,8 @@ public class MainController {
         totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
         stage.show();
     }
+
+    private void setLabels(){
+
+    }
 }
