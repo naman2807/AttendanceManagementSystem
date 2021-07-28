@@ -123,4 +123,8 @@ public class DataSource {
         return attendances;
     }
 
+    public static ObservableList<Attendance> getAttendanceOfStudent(Connection connection, String id){
+
+    }
+
 }
