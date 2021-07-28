@@ -6,6 +6,7 @@ import database.DataSource;
 import formatter.DateFormatter;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -66,7 +67,12 @@ public class ShowAttendanceController {
         }
     }
 
-    private void loadChart(double present, double absent)
+    private void loadChart(double present, double absent){
+        ObservableList<PieChart.Data> list = FXCollections.observableArrayList(
+                new PieChart.Data("PRESENT", present),
+                new PieChart.Data("ABSENT", absent)
+        );
+    }
 
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
