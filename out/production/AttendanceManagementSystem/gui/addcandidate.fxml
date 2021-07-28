@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.Cursor?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="519.0" prefWidth="845.0"
+            style="-fx-background-color: #B1B1FCFF;" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddCandidateController">
+
+    <children>
+        <Pane prefHeight="89.0" prefWidth="846.0" style="-fx-background-color: #7685CDFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="10.0">
+            <children>
+                <Label layoutX="31.0" layoutY="21.0" text="Add Candidate" textFill="#4910c7">
+                    <font>
+                        <Font name="Algerian" size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="34.0" layoutY="55.0" text="Attendance Management" textFill="#ea1010" />
+            </children>
+        </Pane>
+        <Label layoutX="24.0" layoutY="127.0" text="Enter Details To Add Candidate:" textFill="#eb5f0c" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="415.4">
+            <font>
+                <Font name="Algerian" size="24.0" />
+            </font>
+        </Label>
+        <HBox layoutX="-1.0" layoutY="152.0" prefHeight="55.0" prefWidth="846.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-0.39999999999997726" >
+            <children>
+                <Label text="Name:" textFill="#403939">
+                    <font>
+                        <Font name="Bookman Old Style Italic" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="name" onKeyReleased="#handleKeyReleased" prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Name">
+                    <HBox.margin>
+                        <Insets left="121.0" top="20.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <HBox layoutY="214.0" prefHeight="55.0" prefWidth="846.0">
+            <children>
+                <Label text="Phone Number:" textFill="#403939">
+                    <font>
+                        <Font name="Bookman Old Style Italic" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="phoneNumber" onKeyReleased="#handleKeyReleased" prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Phone Number">
+                    <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <HBox layoutX="-1.0" layoutY="282.0" prefHeight="55.0" prefWidth="846.0">
+            <children>
+                <Label text="Address:" textFill="#403939">
+                <font>
+                    <Font name="Bookman Old Style Italic" size="24.0" />
+                </font>
+                    <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="address" onKeyReleased="#handleKeyReleased" prefHeight="35.0" prefWidth="342.0" promptText="Enter Your Address">
+                    <HBox.margin>
+                        <Insets left="91.0" top="20.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <Button fx:id="addCandidate" disable="true" onAction="#addCandidate" layoutX="314.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0"
+                prefWidth="95.0" stylesheets="@attendance.css" text="Add Candidate"
+                AnchorPane.topAnchor="390.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>
