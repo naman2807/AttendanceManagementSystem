@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
@@ -38,6 +39,8 @@ public class ShowAttendanceController {
     private TableView<Attendance> tableView;
     @FXML
     private Label dateLabel;
+    @FXML
+    private PieChart attendance;
 
     public void initialize(){
         tableView.setOnMouseClicked(e -> {
