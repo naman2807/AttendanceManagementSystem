@@ -64,7 +64,7 @@
                 </Pane>
                 <Pane layoutX="341.0" layoutY="20.0" prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #E83C3CFF;">
                     <children>
-                        <Label layoutX="32.0" text="100" textFill="#f4e9e9">
+                        <Label fx:id="totalPresent" layoutX="32.0" text="100" textFill="#f4e9e9">
                             <font>
                                 <Font name="Bodoni MT Bold" size="36.0" />
                             </font>
