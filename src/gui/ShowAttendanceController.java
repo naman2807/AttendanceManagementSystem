@@ -76,8 +76,14 @@ public class ShowAttendanceController {
         attendance.setData(list);
     }
 
-    private void loadWindow(){
-
+    private void loadWindow() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("showattendancepiechart.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Attendance Graph");
+        stage.setScene(new Scene(root, 845,700));
+        stage.show();
     }
 
     public void populateTable() throws SQLException {
