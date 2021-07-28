@@ -27,17 +27,17 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.loginQuery());
         preparedStatement.setString(1, userId);
         ResultSet resultSet = preparedStatement.executeQuery();
-        if(!resultSet.next()){
+        if (!resultSet.next()) {
             MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
                     "Account with USERNAME: " + userId + " does not exist.");
             return false;
         }
         resultSet.previous();
-        while (resultSet.next()){
-            if(userId.equalsIgnoreCase(resultSet.getString(1)) && password.equalsIgnoreCase(resultSet.getString(2))){
+        while (resultSet.next()) {
+            if (userId.equalsIgnoreCase(resultSet.getString(1)) && password.equalsIgnoreCase(resultSet.getString(2))) {
                 LoginWindow.getStage().close();
                 return true;
-            }else {
+            } else {
                 MyAlert.createAlert(Alert.AlertType.WARNING, "FAILED", "CANNOT LOG IN!",
                         "Kindly check your  password.");
                 return false;
@@ -47,8 +47,8 @@ public class DataSource {
     }
 
     public static void addCandidate(Connection connection, Candidate candidate) throws SQLException {
-        if(validateCandidate(connection, candidate)){
-            MyAlert.createAlert(Alert.AlertType.ERROR,"ERROR","CANDIDATE ID: " +
+        if (validateCandidate(connection, candidate)) {
+            MyAlert.createAlert(Alert.AlertType.ERROR, "ERROR", "CANDIDATE ID: " +
                     candidate.getId(), "Candidate already exists. Cannot add to database.");
             return;
         }
@@ -58,12 +58,12 @@ public class DataSource {
         preparedStatement.setString(3, candidate.getId());
         preparedStatement.setString(4, candidate.getAddress());
         int result = preparedStatement.executeUpdate();
-        if(result == 1) {
+        if (result == 1) {
             MyAlert.createAlert(Alert.AlertType.CONFIRMATION, "SUCCESS", "CANDIDATE ID: " +
                     candidate.getId(), "Candidate has been added to record.");
         } else {
-            MyAlert.createAlert(Alert.AlertType.ERROR, "FAILED","CANDIDATE ID: " +
-                     candidate.getId(), "Cannot add candidate to database.");
+            MyAlert.createAlert(Alert.AlertType.ERROR, "FAILED", "CANDIDATE ID: " +
+                    candidate.getId(), "Cannot add candidate to database.");
         }
     }
 
@@ -78,7 +78,7 @@ public class DataSource {
         ObservableList<Candidate> candidates = FXCollections.observableArrayList();
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getCandidatesQuery());
         ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()){
+        while (resultSet.next()) {
             String name = resultSet.getString(1);
             String phone = resultSet.getString(2);
             String id = resultSet.getString(3);
@@ -108,13 +108,13 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getAttendanceRecordQuery());
         preparedStatement.setString(1, date);
         ResultSet resultSet = preparedStatement.executeQuery();
-        if(!resultSet.next()){
-            MyAlert.createAlert(Alert.AlertType.ERROR,"DATE: " + date, "NO DATA FOUND",
+        if (!resultSet.next()) {
+            MyAlert.createAlert(Alert.AlertType.ERROR, "DATE: " + date, "NO DATA FOUND",
                     "No attendance found for specified date.");
             return null;
         }
         resultSet.previous();
-        while (resultSet.next()){
+        while (resultSet.next()) {
             String id = resultSet.getString(1);
             String date1 = resultSet.getString(2);
             String status = resultSet.getString(3);
@@ -128,18 +128,19 @@ public class DataSource {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getStudentAttendanceQuery());
         preparedStatement.setString(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
-        if(!resultSet.next()){
-            MyAlert.createAlert(Alert.AlertType.ERROR,"ID: " + id, "NO DATA FOUND",
+        if (!resultSet.next()) {
+            MyAlert.createAlert(Alert.AlertType.ERROR, "ID: " + id, "NO DATA FOUND",
                     "No attendance found for specified date.");
             return null;
         }
         resultSet.previous();
-        while (resultSet.next()){
+        while (resultSet.next()) {
             String id1 = resultSet.getString(1);
             String date = resultSet.getString(2);
             String status = resultSet.getString(3);
-            attendances.add(new Attendance(id1,status,date));
+            attendances.add(new Attendance(id1, status, date));
         }
+        return attendances;
     }
 
 }
