@@ -133,6 +133,7 @@ public class DataSource {
                     "No attendance found for specified date.");
             return null;
         }
+        resultSet.previous();
     }
 
 }
