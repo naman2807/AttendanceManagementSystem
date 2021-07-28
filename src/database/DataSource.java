@@ -156,6 +156,7 @@ public class DataSource {
     public static Candidate getCandidate(Connection connection, String id) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.searchCandidateQuery());
         preparedStatement.setString(1, id);
+        ResultSet resultSet = preparedStatement.executeQuery();
     }
 
 }
