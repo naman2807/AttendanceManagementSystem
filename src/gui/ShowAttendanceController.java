@@ -64,6 +64,7 @@ public class ShowAttendanceController {
             }
             present = (double) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("present")).count();
             absent = (double) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("absent")).count();
+            loadChart(present, absent);
         }
     }
 
