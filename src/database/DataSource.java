@@ -129,7 +129,9 @@ public class DataSource {
         preparedStatement.setString(1, id);
         ResultSet resultSet = preparedStatement.executeQuery();
         if(!resultSet.next()){
-
+            MyAlert.createAlert(Alert.AlertType.ERROR,"ID: " + id, "NO DATA FOUND",
+                    "No attendance found for specified date.");
+            return null;
         }
     }
 
