@@ -42,6 +42,8 @@ public class MainController {
     private Pane showAttendance;
     @FXML
     private Label totalStudents;
+    @FXML
+    private Label totalDays;
 
     @FXML
     public void handleKeyReleased(){
