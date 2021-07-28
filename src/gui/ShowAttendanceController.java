@@ -40,12 +40,19 @@ public class ShowAttendanceController {
     private Label dateLabel;
 
     public void initialize(){
-        tableView.setOnMouseClicked(e -> showPieChart());
+        tableView.setOnMouseClicked(e -> {
+            try {
+                showPieChart();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        });
     }
 
-    private void showPieChart() {
+    private void showPieChart() throws SQLException {
         if(tableView.getSelectionModel().getSelectedItem() != null){
             Attendance attendance = tableView.getSelectionModel().getSelectedItem();
+            ObservableList<Attendance> attendances = DataSource.getAttendanceOfStudent(DataBaseConnection.getConnection(), attendance.getId());
         }
     }
 
