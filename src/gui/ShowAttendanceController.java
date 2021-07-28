@@ -52,6 +52,7 @@ public class ShowAttendanceController {
     private void showPieChart() throws SQLException {
         if(tableView.getSelectionModel().getSelectedItem() != null){
             int present = 0;
+            int absent = 0;
             Attendance attendance = tableView.getSelectionModel().getSelectedItem();
             ObservableList<Attendance> attendances = DataSource.getAttendanceOfStudent(DataBaseConnection.getConnection(), attendance.getId());
         }
