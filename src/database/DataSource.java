@@ -134,6 +134,9 @@ public class DataSource {
             return null;
         }
         resultSet.previous();
+        while (resultSet.next()){
+
+        }
     }
 
 }
