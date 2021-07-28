@@ -33,6 +33,8 @@ public class ShowAttendanceController {
     private Label dateLabel;
     @FXML
     private PieChart attendancePie;
+    @FXML
+    private Label name;
 
     public void invokePieChart(){
         tableView.setOnMouseClicked((MouseEvent event) -> {
