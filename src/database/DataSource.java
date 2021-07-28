@@ -135,7 +135,7 @@ public class DataSource {
         }
         resultSet.previous();
         while (resultSet.next()){
-
+            String id1 = resultSet.getString(1);
         }
     }
 
