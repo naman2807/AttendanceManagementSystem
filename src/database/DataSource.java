@@ -153,7 +153,8 @@ public class DataSource {
         return String.valueOf(count);
     }
 
-    public static Candidate getCandidate(Connection connection, String id){
+    public static Candidate getCandidate(Connection connection, String id) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.searchCandidateQuery());
 
     }
 
