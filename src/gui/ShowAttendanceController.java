@@ -78,6 +78,10 @@ public class ShowAttendanceController {
         }
     }
 
+    private void setLabels(){
+
+    }
+
     private void loadChart(double present, double absent) throws IOException, SQLException {
         ObservableList<PieChart.Data> list = FXCollections.observableArrayList(
                 new PieChart.Data("PRESENT", present),
