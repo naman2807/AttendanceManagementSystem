@@ -72,6 +72,7 @@ public class ShowAttendanceController {
                 new PieChart.Data("PRESENT", present),
                 new PieChart.Data("ABSENT", absent)
         );
+        attendance.setData(list);
     }
 
     public void populateTable() throws SQLException {
