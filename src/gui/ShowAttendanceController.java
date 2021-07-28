@@ -47,13 +47,13 @@ public class ShowAttendanceController {
         tableView.setOnMouseClicked(e -> {
             try {
                 showPieChart();
-            } catch (SQLException throwables) {
+            } catch (SQLException | IOException throwables) {
                 throwables.printStackTrace();
             }
         });
     }
 
-    private void showPieChart() throws SQLException {
+    private void showPieChart() throws SQLException, IOException {
         if(tableView.getSelectionModel().getSelectedItem() != null){
             double present = 0;
             double absent = 0;
@@ -68,7 +68,8 @@ public class ShowAttendanceController {
         }
     }
 
-    private void loadChart(double present, double absent){
+    private void loadChart(double present, double absent) throws IOException {
+        loadWindow();
         ObservableList<PieChart.Data> list = FXCollections.observableArrayList(
                 new PieChart.Data("PRESENT", present),
                 new PieChart.Data("ABSENT", absent)
