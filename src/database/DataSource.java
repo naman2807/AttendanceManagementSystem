@@ -143,7 +143,8 @@ public class DataSource {
         return attendances;
     }
 
-    public static int getTotalWorkingDays(Connection connection){
+    public static int getTotalWorkingDays(Connection connection) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getDatesFromAttendance());
 
     }
 
