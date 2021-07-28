@@ -82,6 +82,7 @@ public class ShowAttendanceController {
 
     private void setLabels(Attendance attendance) throws SQLException {
         name.setText(Objects.requireNonNull(DataSource.getCandidate(DataBaseConnection.getConnection(), attendance.getId())).getName());
+        id.setText(Objects.requireNonNull(DataSource.getCandidate(DataBaseConnection.getConnection(), attendance.getId())).getId());
     }
 
     private void loadChart(double present, double absent) throws IOException, SQLException {
