@@ -48,4 +48,8 @@ public class SQLQueries {
     public static  String getStudentAttendanceQuery(){
         return "SELECT * FROM " + ATTENDANCE_TABLE + " WHERE " + ID + "= ?";
     }
+
+    public static String getDatesFromAttendance(){
+
+    }
 }

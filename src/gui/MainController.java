@@ -118,14 +118,17 @@ public class MainController {
 
     private void showMainWindow() throws IOException, SQLException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainwindow.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("mainwindow.fxml"));
+        Parent root = loader.load();
         stage.setTitle("Attendance Management Portal");
+        MainController controller = loader.getController();
+        controller.setLabels();
         stage.setScene(new Scene(root, 845, 519));
-        totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
         stage.show();
     }
 
-    private void setLabels(){
-
+    private void setLabels() throws SQLException {
+        totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
     }
 }
