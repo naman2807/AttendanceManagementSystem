@@ -147,7 +147,10 @@ public class DataSource {
         int count = 0;
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getDatesFromAttendance());
         ResultSet resultSet = preparedStatement.executeQuery();
-        return resultSet.getString(1);
+        while (resultSet.next()){
+            count++;
+        }
+        return String.valueOf(count);
     }
 
 }

@@ -44,6 +44,8 @@ public class MainController {
     private Label totalStudents;
     @FXML
     private Label totalDays;
+    @FXML
+    private Label totalPresent;
 
     @FXML
     public void handleKeyReleased(){
@@ -133,5 +135,6 @@ public class MainController {
     private void setLabels() throws SQLException {
         totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
         totalDays.setText(DataSource.getTotalWorkingDays(DataBaseConnection.getConnection()));
+
     }
 }
