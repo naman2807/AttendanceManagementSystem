@@ -59,6 +59,7 @@ public class ShowAttendanceController {
                 return;
             }
             present = (int) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("present")).count();
+            absent = (int) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("absent")).count();
         }
     }
 
@@ -69,7 +70,6 @@ public class ShowAttendanceController {
             return;
         }
         tableView.setItems(attendances);
-
 
     }
 }
