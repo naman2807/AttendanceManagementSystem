@@ -142,6 +142,6 @@ public class MainController {
 
     private String getPresentStudentCount() throws SQLException {
         PreparedStatement preparedStatement = DataBaseConnection.getConnection().prepareStatement(SQLQueries.getAttendanceRecordQuery());
-
+        preparedStatement.setString(1, DateFormatter.getCurrentFormattedDate());
     }
 }
