@@ -153,4 +153,8 @@ public class DataSource {
         return String.valueOf(count);
     }
 
+    public static Candidate getCandidate(Connection connection, String id){
+
+    }
+
 }

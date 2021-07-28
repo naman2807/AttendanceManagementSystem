@@ -68,6 +68,7 @@ public class ShowAttendanceController {
             double present = 0;
             double absent = 0;
             Attendance attendance = tableView1.getSelectionModel().getSelectedItem();
+            setLabels(attendance);
             ObservableList<Attendance> attendances = DataSource.getAttendanceOfStudent(DataBaseConnection.getConnection(), attendance.getId());
             if(attendances == null){
                 return;
@@ -78,7 +79,7 @@ public class ShowAttendanceController {
         }
     }
 
-    private void setLabels(){
+    private void setLabels(Attendance attendance){
 
     }
 
