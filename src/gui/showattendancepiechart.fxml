@@ -11,9 +11,10 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="gui.ShowAttendanceController"
-            prefHeight="519.0" prefWidth="845.0">
+            style="-fx-background-color: #bcbed7;"
+            prefHeight="524.0" prefWidth="714.0">
     <children>
-        <PieChart fx:id="attendancePie" layoutX="86.0" layoutY="38.0" prefHeight="362.0" prefWidth="439.0" />
+        <PieChart fx:id="attendancePie" layoutX="180.0" layoutY="158.0" prefHeight="342.0" prefWidth="412.0"  />
         <Pane prefHeight="73.0" prefWidth="714.0" style="-fx-background-color: #7509e1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <children>
                 <Label layoutX="25.0" layoutY="22.0" text="Attendance Graph " textFill="#0be0c8">
@@ -28,7 +29,7 @@
                 <Font name="Arial Bold" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="150.0" layoutY="88.0" text="Naman" textFill="#0c1aeb">
+        <Label fx:id="name" layoutX="150.0" layoutY="88.0" text="Naman" textFill="#0c1aeb">
             <font>
                 <Font name="Arial Bold" size="18.0" />
             </font>
