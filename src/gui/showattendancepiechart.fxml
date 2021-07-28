@@ -39,7 +39,7 @@
                 <Font name="Arial Bold" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="118.0" layoutY="118.0" text="NA" textFill="#0c1aeb">
+        <Label fx:id="id" layoutX="118.0" layoutY="118.0" text="NA" textFill="#0c1aeb">
             <font>
                 <Font name="Arial Bold" size="18.0" />
             </font>
