@@ -4,26 +4,17 @@ import data.Attendance;
 import database.DataBaseConnection;
 import database.DataSource;
 import formatter.DateFormatter;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-import javafx.event.Event;
-import javafx.event.EventDispatchChain;
-import javafx.event.EventDispatcher;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.paint.Color;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -41,23 +32,38 @@ public class ShowAttendanceController {
     @FXML
     private Label dateLabel;
     @FXML
-    private PieChart attendance;
+    private PieChart attendancePie;
 
-    public void initialize(){
-        tableView.setOnMouseClicked(e -> {
-            try {
-                showPieChart();
-            } catch (SQLException | IOException throwables) {
-                throwables.printStackTrace();
+    public void invokePieChart(){
+        tableView.setOnMouseClicked((MouseEvent event) -> {
+            if(event.getClickCount() == 1){
+                try {
+                    loadWindow();
+                } catch (IOException | SQLException throwables) {
+                    throwables.printStackTrace();
+                }
             }
+
         });
     }
 
-    private void showPieChart() throws SQLException, IOException {
-        if(tableView.getSelectionModel().getSelectedItem() != null){
+    private void loadWindow() throws IOException, SQLException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("showattendancepiechart.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Attendance Graph");
+        ShowAttendanceController controller = loader.getController();
+        controller.showPieChart(tableView);
+        stage.setScene(new Scene(root, 845,700));
+        stage.show();
+    }
+
+    private void showPieChart(TableView<Attendance> tableView1) throws SQLException, IOException {
+        if(tableView1.getSelectionModel().getSelectedItem() != null){
             double present = 0;
             double absent = 0;
-            Attendance attendance = tableView.getSelectionModel().getSelectedItem();
+            Attendance attendance = tableView1.getSelectionModel().getSelectedItem();
             ObservableList<Attendance> attendances = DataSource.getAttendanceOfStudent(DataBaseConnection.getConnection(), attendance.getId());
             if(attendances == null){
                 return;
@@ -68,24 +74,14 @@ public class ShowAttendanceController {
         }
     }
 
-    private void loadChart(double present, double absent) throws IOException {
-        loadWindow();
+    private void loadChart(double present, double absent) throws IOException, SQLException {
         ObservableList<PieChart.Data> list = FXCollections.observableArrayList(
                 new PieChart.Data("PRESENT", present),
                 new PieChart.Data("ABSENT", absent)
         );
-        attendance.setData(list);
+        attendancePie.setData(list);
     }
 
-    private void loadWindow() throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("showattendancepiechart.fxml"));
-        Parent root = loader.load();
-        stage.setTitle("Attendance Graph");
-        stage.setScene(new Scene(root, 845,700));
-        stage.show();
-    }
 
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
@@ -94,6 +90,6 @@ public class ShowAttendanceController {
             return;
         }
         tableView.setItems(attendances);
-
+        invokePieChart();
     }
 }

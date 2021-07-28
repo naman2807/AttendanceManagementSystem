@@ -25,14 +25,15 @@
                 <Label layoutX="34.0" layoutY="55.0" text="Attendance Management" textFill="#ea1010" />
             </children>
         </Pane>
-        <HBox layoutY="100.0" prefHeight="100.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773">
+        <HBox layoutY="100.0" prefHeight="100.0" prefWidth="846.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="-1.3999999999999773">
             <children>
                 <Pane prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #9183E8FF;">
                     <HBox.margin>
                         <Insets bottom="30.0" left="10.0" top="10.0" />
                     </HBox.margin>
                     <children>
-                        <Label layoutX="32.0" text="100" textFill="#efeaea">
+                        <Label fx:id="totalStudents" layoutX="32.0" text="100" textFill="#efeaea">
                             <font>
                                 <Font name="Bodoni MT Bold" size="36.0" />
                             </font>

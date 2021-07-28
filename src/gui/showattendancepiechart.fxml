@@ -12,7 +12,7 @@
             fx:controller="gui.ShowAttendanceController"
             prefHeight="519.0" prefWidth="845.0">
     <children>
-        <PieChart fx:id="attendance" layoutX="86.0" layoutY="38.0" prefHeight="362.0" prefWidth="439.0" />
+        <PieChart fx:id="attendancePie" layoutX="86.0" layoutY="38.0" prefHeight="362.0" prefWidth="439.0" />
     </children>
 
 </AnchorPane>
