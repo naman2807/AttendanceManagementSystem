@@ -143,4 +143,8 @@ public class DataSource {
         return attendances;
     }
 
+    public static int getTotalWorkingDays(Connection connection){
+
+    }
+
 }
