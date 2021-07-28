@@ -145,7 +145,7 @@ public class DataSource {
 
     public static int getTotalWorkingDays(Connection connection) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getDatesFromAttendance());
-
+        ResultSet resultSet = preparedStatement.executeQuery();
     }
 
 }
