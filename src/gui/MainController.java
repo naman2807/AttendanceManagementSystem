@@ -3,6 +3,7 @@ package gui;
 import alert.MyAlert;
 import database.DataBaseConnection;
 import database.DataSource;
+import database.SQLQueries;
 import formatter.DateFormatter;
 import formatter.TimeFormatter;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Objects;
 
@@ -136,5 +138,10 @@ public class MainController {
         totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
         totalDays.setText(DataSource.getTotalWorkingDays(DataBaseConnection.getConnection()));
         totalPresent.setText(getPresentStudentCount());
+    }
+
+    private String getPresentStudentCount() throws SQLException {
+        PreparedStatement preparedStatement = DataBaseConnection.getConnection().prepareStatement(SQLQueries.getAttendanceRecordQuery());
+
     }
 }
