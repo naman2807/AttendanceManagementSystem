@@ -50,6 +50,6 @@ public class SQLQueries {
     }
 
     public static String getDatesFromAttendance(){
-
+        return "SELECT COUNT (DISTINCT "  + DATE + ") FROM " + ATTENDANCE_TABLE;
     }
 }
