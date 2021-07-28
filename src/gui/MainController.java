@@ -130,5 +130,6 @@ public class MainController {
 
     private void setLabels() throws SQLException {
         totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
+
     }
 }
