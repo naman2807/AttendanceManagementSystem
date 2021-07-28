@@ -143,10 +143,11 @@ public class DataSource {
         return attendances;
     }
 
-    public static int getTotalWorkingDays(Connection connection) throws SQLException {
+    public static String getTotalWorkingDays(Connection connection) throws SQLException {
+        int count = 0;
         PreparedStatement preparedStatement = connection.prepareStatement(SQLQueries.getDatesFromAttendance());
         ResultSet resultSet = preparedStatement.executeQuery();
-        return resultSet.getInt(1);
+        return resultSet.getString(1);
     }
 
 }

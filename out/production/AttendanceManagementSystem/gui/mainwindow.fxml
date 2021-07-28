@@ -47,7 +47,7 @@
                 </Pane>
                 <Pane layoutX="20.0" layoutY="20.0" prefHeight="59.0" prefWidth="170.0" style="-fx-background-color: #17EE45F8;">
                     <children>
-                        <Label layoutX="32.0" text="100" textFill="#fcfafa">
+                        <Label fx:id="totalDays" layoutX="32.0" text="100" textFill="#fcfafa">
                             <font>
                                 <Font name="Bodoni MT Bold" size="36.0" />
                             </font>
