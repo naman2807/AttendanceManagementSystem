@@ -54,17 +54,19 @@ public class ShowAttendanceController {
 
     private void showPieChart() throws SQLException {
         if(tableView.getSelectionModel().getSelectedItem() != null){
-            int present;
-            int absent = 0;
+            double present = 0;
+            double absent = 0;
             Attendance attendance = tableView.getSelectionModel().getSelectedItem();
             ObservableList<Attendance> attendances = DataSource.getAttendanceOfStudent(DataBaseConnection.getConnection(), attendance.getId());
             if(attendances == null){
                 return;
             }
-            present = (int) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("present")).count();
-            absent = (int) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("absent")).count();
+            present = (double) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("present")).count();
+            absent = (double) attendances.stream().filter(attendance1 -> attendance1.getStatus().equalsIgnoreCase("absent")).count();
         }
     }
+
+    private void loadChart(double present, double absent)
 
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
