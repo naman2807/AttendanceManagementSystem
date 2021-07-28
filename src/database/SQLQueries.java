@@ -44,4 +44,8 @@ public class SQLQueries {
     public static String getAttendanceRecordQuery(){
         return "SELECT * FROM " + ATTENDANCE_TABLE + " WHERE " + DATE + "= ?";
     }
+
+    public static  String getStudentAttendanceQuery(){
+
+    }
 }

@@ -40,7 +40,13 @@ public class ShowAttendanceController {
     private Label dateLabel;
 
     public void initialize(){
-        tableView.setOnMouseClicked((MouseEvent e) -> showPieChart());
+        tableView.setOnMouseClicked(e -> showPieChart());
+    }
+
+    private void showPieChart() {
+        if(tableView.getSelectionModel().getSelectedItem() != null){
+            Attendance attendance = tableView.getSelectionModel().getSelectedItem();
+        }
     }
 
     public void populateTable() throws SQLException {
