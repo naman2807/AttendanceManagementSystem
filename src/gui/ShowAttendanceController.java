@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 /**
  * Created By: Naman Agarwal
@@ -79,8 +80,8 @@ public class ShowAttendanceController {
         }
     }
 
-    private void setLabels(Attendance attendance){
-
+    private void setLabels(Attendance attendance) throws SQLException {
+        name.setText(Objects.requireNonNull(DataSource.getCandidate(DataBaseConnection.getConnection(), attendance.getId())).getName());
     }
 
     private void loadChart(double present, double absent) throws IOException, SQLException {
