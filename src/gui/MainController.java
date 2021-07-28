@@ -132,6 +132,6 @@ public class MainController {
 
     private void setLabels() throws SQLException {
         totalStudents.setText(String.valueOf((long) DataSource.getCandidatesList(DataBaseConnection.getConnection()).size()));
-
+        totalDays.setText(String.valueOf((long) DataSource.getTotalWorkingDays(DataBaseConnection.getConnection())));
     }
 }
