@@ -4,17 +4,25 @@ import data.Attendance;
 import database.DataBaseConnection;
 import database.DataSource;
 import formatter.DateFormatter;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.event.EventDispatchChain;
 import javafx.event.EventDispatcher;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -31,6 +39,10 @@ public class ShowAttendanceController {
     @FXML
     private Label dateLabel;
 
+    public void initialize(){
+        tableView.setOnMouseClicked((MouseEvent e) -> showPieChart());
+    }
+
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
         ObservableList<Attendance> attendances = DataSource.getAttendanceRecord(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate());
@@ -38,5 +50,7 @@ public class ShowAttendanceController {
             return;
         }
         tableView.setItems(attendances);
+
+
     }
 }

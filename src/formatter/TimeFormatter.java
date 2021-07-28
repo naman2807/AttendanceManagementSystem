@@ -15,7 +15,7 @@ public class TimeFormatter {
 
     public static boolean validateTime(){
         LocalTime time = LocalTime.now();
-        return time.isAfter(LocalTime.of(8,30))
+        return time.isAfter(LocalTime.of(10,30))
                 || time.isBefore(LocalTime.of(8,00));
     }
 
