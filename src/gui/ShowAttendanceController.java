@@ -76,6 +76,10 @@ public class ShowAttendanceController {
         attendance.setData(list);
     }
 
+    private void loadWindow(){
+
+    }
+
     public void populateTable() throws SQLException {
         dateLabel.setText(DateFormatter.getCurrentFormattedDate());
         ObservableList<Attendance> attendances = DataSource.getAttendanceRecord(DataBaseConnection.getConnection(), DateFormatter.getCurrentFormattedDate());

@@ -6,9 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.chart.PieChart?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="gui.ShowAttendanceController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="519.0" prefWidth="845.0">
+    <children>
+        <PieChart fx:id="attendance" layoutX="86.0" layoutY="38.0" prefHeight="362.0" prefWidth="439.0" />
+    </children>
 
 </AnchorPane>
